@@ -1,0 +1,212 @@
+/* =============================================== */
+/* ARQUIVO DE ESTILOS: termos.css                   */
+/* =============================================== */
+
+/* =============================================== */
+/* 1. VARIÁVEIS GLOBAIS E RESET                    */
+/* =============================================== */
+:root {
+    /* Cores */
+    --primary-color: #6c63ff;
+    --primary-hover: #4d44db;
+    --white-color: #fff;
+    --black-color: #1a1a1a;
+
+    /* Padrões de Design */
+    --font-main: 'Poppins', sans-serif;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    /* Variáveis Semânticas para Light Mode (Modo Claro) */
+    --text-heading: #1e293b;
+    --text-body: #475569;
+    --text-muted: #64748b;
+    --bg-main: #f8fafc;
+    --surface-primary: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+/* Definição das variáveis para o Modo Escuro */
+html.dark-mode {
+    --text-heading: #f1f5f9;
+    --text-body: #94a3b8;
+    --text-muted: #64748b;
+    --bg-main: #111827;
+    --surface-primary: #1f2937;
+    --border-color: #4b5563;
+}
+
+/* Reset e Estilos Base */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+  background-color: transparent; /* Fundo da barra de rolagem (track) - transparente para se misturar ao body */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6c63ff; /* Cor da "thumb" (a barra que você arrasta) */
+  border-radius: 10px; /* Borda arredondada da thumb */
+  border: 3px solid white; /* Borda em volta da thumb, para destacá-la do fundo */
+}
+
+/* No Dark Mode, ajustar a cor da borda da thumb para contraste */
+html.dark-mode body::-webkit-scrollbar-thumb {
+    border-color: #edf2f7; /* Ajusta a borda no modo escuro */
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin; /* Largura da barra de rolagem (thin, auto ou none) */
+  scrollbar-color: #6c63ff transparent; /* thumb track (cor da barra que rola / cor do fundo) */
+}
+
+
+h1, h2, h3, h4, h5, h6 { color: var(--text-heading); font-weight: 600; }
+a { text-decoration: none; color: var(--primary-color); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+/* =============================================== */
+/* 2. CABEÇALHO SIMPLIFICADO                       */
+/* =============================================== */
+.header { 
+    background: var(--black-color); 
+    color: var(--white-color); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+.header-inner { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 72px; 
+}
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none; 
+    color: var(--white-color); 
+}
+.logo-text { 
+    font-size: 20px; 
+    font-weight: 600; 
+}
+
+/* Novo Menu de Opções */
+.options-menu { 
+    position: relative; 
+}
+.options-toggle { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: white; 
+    font-size: 1.2rem;
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    transition: background 0.3s; 
+}
+.options-toggle:hover { 
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.options-dropdown { 
+    position: absolute; 
+    right: 0; 
+    top: 120%; 
+    background: var(--black-color); 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-lg); 
+    width: 220px; 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(10px); 
+    transition: all 0.3s ease; 
+    z-index: 1001; 
+}
+.options-menu.active .options-dropdown { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+}
+.dropdown-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 12px 15px; 
+    text-decoration: none; 
+    color: #d1d5db; 
+    font-size: 0.9rem; 
+}
+.dropdown-item:hover { 
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: var(--primary-color); 
+}
+
+/* =============================================== */
+/* 3. ESTILOS DA PÁGINA DE TERMOS                  */
+/* =============================================== */
+.main-content { padding-top: 100px; padding-bottom: 48px; }
+.content-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+@media (min-width: 1024px) { .content-grid { grid-template-columns: 240px 1fr; } }
+.sidebar { display: none; }
+@media (min-width: 1024px) { .sidebar { display: block; } }
+.sidebar-nav { position: sticky; top: 100px; }
+.nav-title { font-weight: 700; margin-bottom: 16px; color: var(--text-heading); }
+.nav-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.toc-link { display: block; border-left: 2px solid var(--border-color); padding: 4px 12px; transition: all 0.2s ease; color: var(--text-body); }
+.toc-link:hover { color: var(--primary-color); border-left-color: var(--primary-color); }
+.toc-link.active { color: var(--primary-color); font-weight: 600; border-left-color: var(--primary-color); transform: translateX(4px); }
+.policy-card { background-color: var(--surface-primary); padding: 24px; border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+@media (min-width: 640px) { .policy-card { padding: 32px; } }
+@media (min-width: 1024px) { .policy-card { padding: 48px; } }
+.policy-header { margin-bottom: 48px; text-align: center; }
+.main-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 12px; }
+@media (min-width: 640px) { .main-title { font-size: 3rem; } }
+.subtitle { color: var(--text-muted); }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
+.prose h2 i { color: var(--primary-color); }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; }
+.prose p, .prose li { line-height: 1.7; margin-bottom: 16px; }
+.prose ul { list-style: disc; padding-left: 20px; }
+.prose a { font-weight: 500; }
+.prose a:hover { text-decoration: underline; }
+.terms-section { margin-bottom: 48px; }
+.terms-section:last-child { margin-bottom: 0; }
+
+/* =============================================== */
+/* 4. SEÇÃO DE ASSINATURAS                         */
+/* =============================================== */
+.signature-area { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-color); }
+.signature-location { text-align: right; margin-bottom: 48px; }
+.signature-block { margin: 48px auto; max-width: 400px; text-align: center; }
+.signature-line { border-bottom: 1px solid var(--text-body); height: 1px; margin-bottom: 12px; }
+.signature-block p { margin: 4px 0; line-height: 1.6; font-size: 14px; }
+.witnesses-section { margin-top: 48px; padding-top: 32px; border-top: 1px dashed var(--border-color); }
+.witnesses-section h4 { margin-bottom: 24px; font-weight: 600; font-size: 1.1em; text-align: left; }
+.witness-block { margin-bottom: 32px; text-align: left; }
+.witness-block .signature-line { max-width: 350px; margin: 0; margin-bottom: 12px; }
+.witness-block p { margin: 4px 0; line-height: 1.6; font-size: 14px; }
+
+/* Rodapé */
+.footer { background-color: var(--black-color); margin-top: 48px; }
+.footer-container { text-align: center; padding: 32px 15px; color: var(--text-muted); }
+.footer-note { font-size: 12px; margin-top: 8px; }
+
+/* Botão Voltar ao Topo */
+.back-to-top-btn { position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; border-radius: 50%; background-color: var(--primary-color); color: var(--white-color); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; z-index: 50; opacity: 0; visibility: hidden; transform: translateY(20px); }
+.back-to-top-btn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top-btn:hover { background-color: var(--primary-hover); transform: translateY(-3px); }
+
