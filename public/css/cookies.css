@@ -1,0 +1,207 @@
+
+
+:root {
+  --cookie-primary: #6c63ff;
+  --cookie-primary-dark: #4d44db;
+  --cookie-white: #ffffff;
+  --cookie-black: #1a202c;
+  --cookie-dark-gray: #4a5568;
+  --cookie-light-gray: #edf2f7;
+  --cookie-gray: #718096;
+  --cookie-background-light: var(--cookie-white);
+  --cookie-text-light: var(--cookie-dark-gray);
+  --cookie-background-dark: #2d3748;
+  --cookie-text-dark: var(--cookie-light-gray);
+  --cookie-shadow: 0 -4px 15px -3px rgba(0, 0, 0, 0.1);
+  --cookie-font: 'Poppins', sans-serif;
+}
+
+/* Container principal do banner */
+.cookie-banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--cookie-background-light);
+  color: var(--cookie-text-light);
+  box-shadow: var(--cookie-shadow);
+  /* Estado inicial: escondido abaixo da tela */
+  transform: translateY(100%); 
+  /* Define a animação */
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: var(--cookie-font);
+  padding: 1.5rem 2rem;
+}
+
+/* Classe para controlar a visibilidade e disparar a animação */
+.cookie-banner-container.is-visible {
+  transform: translateY(0);
+}
+
+
+.dark-mode .cookie-banner-container {
+  background-color: var(--cookie-background-dark);
+  color: var(--cookie-text-dark);
+}
+
+/* Conteúdo interno */
+.cookie-banner-content {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookie-banner-text h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+.cookie-banner-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.cookie-banner-text a {
+  color: var(--cookie-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.cookie-banner-text a:hover {
+  text-decoration: underline;
+}
+
+.cookie-banner-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Estilo dos Toggles (Switches) */
+.cookie-switch {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.cookie-switch.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.cookie-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.cookie-switch .slider {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 22px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  flex-shrink: 0; /* Impede que o switch encolha */
+}
+.cookie-switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.cookie-switch input:checked + .slider {
+  background-color: var(--cookie-primary);
+}
+
+.cookie-switch input:checked + .slider::before {
+  transform: translateX(16px);
+}
+
+.cookie-switch input:checked:disabled + .slider {
+  background-color: var(--cookie-primary);
+  opacity: 0.6;
+}
+.cookie-future-tag {
+  font-size: 0.8em;
+  color: var(--cookie-gray);
+  margin-left: 0.5rem;
+}
+.dark-mode .cookie-future-tag {
+  color: var(--cookie-light-gray);
+  opacity: 0.7;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Botão único */
+.cookie-btn-primary {
+  font-family: var(--cookie-font);
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  background-color: var(--cookie-primary);
+  color: var(--cookie-white);
+  white-space: nowrap;
+}
+.cookie-btn-primary:hover {
+  background-color: var(--cookie-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2);
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .cookie-banner-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+   .cookie-banner-options {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cookie-banner-actions {
+    justify-content: center;
+  }
+}
+
+/* === MELHORIAS PARA MOBILE === */
+@media (max-width: 768px) {
+  .cookie-banner-container {
+    padding: 1.5rem 1rem 2rem 1rem; /* Mais espaço inferior */
+  }
+
+  .cookie-banner-content {
+    gap: 1.25rem;
+  }
+  
+  .cookie-banner-options {
+    flex-direction: column;
+    /* Alinha os itens à esquerda dentro de um bloco centralizado */
+    align-items: flex-start; 
+    margin: 0 auto;
+    width: fit-content; /* Container com a largura do conteúdo */
+  }
+
+  .cookie-switch {
+    width: 100%;
+  }
+}
+

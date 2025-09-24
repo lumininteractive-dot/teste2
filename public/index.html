@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43JY2MX5EN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-43JY2MX5EN');
+    </script>
+
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumin Interactive | Criação de Sites Profissionais</title>
+    <meta name="description" content="Soluções digitais personalizadas para seu negócio. Sites modernos, responsivos e de alto desempenho.">
+    <meta name="author" content="Lumin Interactive">
+    <link rel="canonical" href="https://www.lumininteractive.com.br/">
+
+    <!-- SEO Avançado -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lumin Interactive | Criação de Sites Profissionais">
+    <meta property="og:description" content="Soluções digitais personalizadas para seu negócio. Sites modernos, responsivos e de alto desempenho.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lumininteractive.com.br/">
+    <meta property="og:image" content="imagens/logobrancalumin.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lumin Interactive | Criação de Sites Profissionais">
+    <meta name="twitter:description" content="Sites modernos, responsivos e prontos para o seu negócio.">
+    <meta name="twitter:image" content="imagens/logobrancalumin.webp">
+
+    <!-- Favicons -->
+    <link rel="icon" href="imagens/luminazul.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="imagens/luminazul.webp" sizes="180x180">
+
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Compilado do Sass -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cookies.css">
+
+
+    <!-- SCRIPT ANTI-FLICKER -->
+    <script>
+      (function() {
+        // Aplica tema escuro antes da renderização
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+
+        // Evita flash de dados antigos do usuário
+        const style = document.createElement('style');
+        style.textContent = `
+          #user-avatar-header, 
+          #user-shortname-header,
+          .mobile-user-avatar,
+          .mobile-user-toggle span {
+            visibility: hidden;
+          }
+        `;
+        document.head.appendChild(style);
+      })(); 
+    </script>
+
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Logo à esquerda -->
+            <a href="/" class="logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_logo'});">
+                <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="logo-image" style="height: 60px;">
+                <span class="logo-text">Lumin Interactive</span>
+            </a>
+
+            <!-- Navegação central (visível apenas no desktop) -->
+            <nav class="nav-center" id="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_inicio'});">Inicio</a></li>
+                    <li><a href="servicos.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_servicos'});">Serviços</a></li>
+                    <li><a href="portfolio.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_modelos'});">Modelos</a></li>
+                    <li><a href="sobre.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_sobre'});">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_contato'});">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações e Menu à Direita (Desktop) -->
+            <div class="header-right-side">
+                <a href="orcamento.html" class="btn btn-primary free-quote-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'header_orcamento_gratis'});">Orçamento Grátis</a>
+                <div class="settings-menu" id="settings-menu">
+                    <button class="settings-toggle" id="settings-toggle" aria-label="Abrir opções">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="settings-dropdown">
+                        <a href="#" class="dropdown-item" id="dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_desktop'});">
+                            <i class="fas fa-adjust"></i>
+                            <span id="dark-mode-text">Modo Escuro</span>
+                        </a>
+                        <a href="config.html" class="dropdown-item" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_configuracoes'});">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" id="mobile-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile (conteúdo) -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-menu">
+                <li><a href="index.html" class="mobile-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_inicio'});"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="servicos.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_servicos'});"><i class="fas fa-briefcase"></i>Serviços</a></li>
+                <li><a href="portfolio.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_modelos'});"><i class="fas fa-layer-group"></i>Modelos</a></li>
+                <li><a href="sobre.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_sobre'});"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                <li><a href="contato.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_contato'});"><i class="fas fa-envelope"></i>Contato</a></li>
+                <li><a href="orcamento.html" class="btn btn-primary mobile-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'mobile_orcamento_gratis'});">Orçamento Grátis</a></li>
+            </ul>
+            <div class="mobile-nav-divider"></div>
+            <ul class="mobile-menu">
+                <li><a href="#" class="mobile-link" id="mobile-dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_mobile'});"><i class="fas fa-adjust"></i><span id="mobile-dark-mode-text">Modo Escuro</span></a></li>
+                <li><a href="config.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_configuracoes'});"><i class="fas fa-cog"></i>Configurações</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Seção -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content reveal">
+           <h1 class="hero-title">Seu Site Ideal com <span class="highlight">Modelos Prontos</span> e Serviços Exclusivos</h1>
+           <p class="hero-subtitle">Lumin Interactive combina modelos profissionais e atendimento personalizado para impulsionar sua presença digital.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary hero-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'hero_nossos_servicos'});">Nossos Serviços</a>
+                <a href="#contact" class="btn btn-secondary hero-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'hero_fale_conosco'});">Fale Conosco</a>
+            </div>
+        </div>
+        <div class="hero-image reveal">
+            <img src="imagens/imagehome.webp" alt="Ilustração de desenvolvimento web" class="hero-img" loading="lazy">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+
+<main>
+    <!-- ============================================
+                      SEÇÃO DE SERVIÇOS
+                      ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Nossos <span class="highlight">Serviços</span> em Promoção</h2>
+                <p class="section-subtitle">Soluções completas com preços de lançamento por tempo limitado.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Serviço 1: Remoção de Vírus e Malware -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Remoção de Vírus e Malware</h3>
+                    <p>Proteja seus dados e recupere o desempenho do seu computador.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Varredura completa do sistema</li>
+                        <li><i class="fas fa-check"></i> Remoção de ameaças</li>
+                        <li><i class="fas fa-check"></i> Instalação de antivírus</li>
+                        <li><i class="fas fa-check"></i> Dicas de segurança</li>
+                    </ul>
+                    <div class="service-price">
+                        <div class="price-top-line">
+                            <span class="price-old">R$ 149,90</span>
+                            <span class="price-discount-badge">20% OFF</span>
+                        </div>
+                        <span class="price animated-price" data-final-price="119.90">R$ 0,00</span>
+                        <span class="price-note">Em 6x de R$19,98 sem juros</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="gtag('event', 'select_content', {'event_category': 'service_engagement', 'event_label': 'quero_servico_remocao_virus'});">Quero esse serviço</a>
+                </div>
+
+                <!-- Serviço 2: Configuração de Firewall e Rede -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Configuração de Firewall e Rede</h3>
+                    <p>Proteja sua rede contra ameaças e otimize a comunicação interna.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Instalação e configuração de firewall</li>
+                        <li><i class="fas fa-check"></i> Definição de regras de segurança</li>
+                        <li><i class="fas fa-check"></i> Segmentação de rede (VLANs)</li>
+                        <li><i class="fas fa-check"></i> Monitoramento de tráfego</li>
+                    </ul>
+                    <div class="service-price">
+                        <div class="price-top-line">
+                            <span class="price-old">R$ 1.499,90</span>
+                            <span class="price-discount-badge">20% OFF</span>
+                        </div>
+                        <span class="price animated-price" data-final-price="1199.90">R$ 0,00</span>
+                        <span class="price-note">Em 6x de R$199,98 sem juros</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="gtag('event', 'select_content', {'event_category': 'service_engagement', 'event_label': 'quero_servico_firewall'});">Quero esse serviço</a>
+                </div>
+
+                <!-- Serviço 3: Reestruturação de Site -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Reestruturação de Site</h3>
+                    <p>Modernize o visual e a funcionalidade do seu site para atrair mais clientes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Redesign completo</li>
+                        <li><i class="fas fa-check"></i> Otimização para mobile</li>
+                        <li><i class="fas fa-check"></i> Melhoria de velocidade</li>
+                        <li><i class="fas fa-check"></i> SEO básico incluído</li>
+                    </ul>
+                    <div class="service-price">
+                        <div class="price-top-line">
+                           <span class="price-old">R$ 1.499,90</span>
+                           <span class="price-discount-badge">30% OFF</span>
+                       </div>
+                        <span class="price animated-price" data-final-price="1049.90">R$ 0,00</span>
+                        <span class="price-note">Em 6x de R$174,98 sem juros</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="gtag('event', 'select_content', {'event_category': 'service_engagement', 'event_label': 'quero_servico_reestruturacao'});">Quero esse serviço</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================
+    SEÇÃO DE PORTFÓLIO (HTML ATUALIZADO)
+    ============================================ -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Nossos <span class="highlight">Modelos</span> com Descontos Especiais</h2>
+            <p class="section-subtitle">Aproveite os preços de lançamento para ter um site incrível.</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Item 1: E-commerce Pro (ATUALIZADO) -->
+            <div class="portfolio-item reveal" 
+                 data-img="imagens/modelos/ecom-home.webp" 
+                 data-title="E-commerce Pro" 
+                 data-description="Uma solução de e-commerce completa e pronta para vender. Com um design limpo e focado na experiência de compra, este modelo tem tudo o que você precisa para transformar visitantes em clientes." 
+                 data-old-price="R$ 3.746,25"
+                 data-price="2997.00" 
+                 data-installments="12x de R$ 249,75" 
+                 data-pix-discount="10% OFF no Pix"
+                 data-discount="20% OFF"
+                 data-category="ecommerce"
+                 data-features="Carrinho de compras intuitivo,Integração com gateways de pagamento,Páginas de produto detalhadas,Sistema de busca e filtros,Painel de gerenciamento"
+                 data-images="imagens/modelos/ecom-home.webp,imagens/modelos/ecom-categorias.webp,imagens/modelos/ecom-novidades.webp,imagens/modelos/ecom-vendidos.webp,imagens/modelos/ecom-promocao.webp,imagens/modelos/ecom.webp,imagens/modelos/ecom-feedback.webp">
+                
+                <div class="portfolio-image-container">
+                    <img src="imagens/modelos/ecom-home.webp" alt="E-commerce Pro" class="portfolio-img" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E83E8C/ffffff?text=E-commerce';">
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">E-commerce Pro</h3>
+                    <p class="portfolio-summary"></p> 
+                    <div class="portfolio-pricing">
+                        <div class="price-top-line">
+                            <span class="price-old">R$ 3.746,25</span>
+                            <span class="price-discount-badge">20% OFF</span>
+                        </div>
+                        <span class="price-main animated-price" data-final-price="2997.00">R$ 0,00</span>
+                    </div>
+                    <span class="price-installments">12x de R$ 249,75</span>
+                    <span class="btn btn-primary btn-acquire" onclick="gtag('event', 'view_item', {'event_category': 'portfolio_interaction', 'event_label': 'ver_detalhes_ecommerce_pro'});">Ver Detalhes</span>
+                </div>
+            </div>
+
+            <!-- Item 2: Startup Vision (ATUALIZADO) -->
+            <div class="portfolio-item reveal" 
+                 data-img="imagens/modelos/startup-home.webp" 
+                 data-title="Startup Vision" 
+                 data-description="Valide sua ideia e atraia investidores com uma página única, direta e moderna. Este modelo é perfeito para startups apresentarem seu pitch, time, produto e roadmap de forma clara e convincente." 
+                 data-old-price="R$ 1.995,71"
+                 data-price="1397.00" 
+                 data-installments="12x de R$ 116,42" 
+                 data-pix-discount="10% OFF no Pix"
+                 data-discount="30% OFF"
+                 data-category="sites"
+                 data-features="Estrutura de Pitch Deck,Seção de time,Roadmap visual,Design inovador,Formulário para investidores"
+                 data-images="imagens/modelos/startup-home.webp,imagens/modelos/startup-proposta.webp,imagens/modelos/startup-equipe.webp,imagens/modelos/startup-jornada.webp,imagens/modelos/startup-contato.webp">
+
+                <div class="portfolio-image-container">
+                    <img src="imagens/modelos/startup-home.webp" alt="Startup Vision" class="portfolio-img" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/6c63ff/ffffff?text=Startup+Vision';">
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Startup Vision</h3>
+                    <p class="portfolio-summary"></p>
+                    <div class="portfolio-pricing">
+                        <div class="price-top-line">
+                            <span class="price-old">R$ 1.995,71</span>
+                            <span class="price-discount-badge">30% OFF</span>
+                        </div>
+                        <span class="price-main animated-price" data-final-price="1397.00">R$ 0,00</span>
+                    </div>
+                    <span class="price-installments">12x de R$ 116,42</span>
+                    <span class="btn btn-primary btn-acquire" onclick="gtag('event', 'view_item', {'event_category': 'portfolio_interaction', 'event_label': 'ver_detalhes_startup_vision'});">Ver Detalhes</span>
+                </div>
+            </div>
+
+            <!-- Item 3: Boutique Digital (ATUALIZADO) -->
+            <div class="portfolio-item reveal" 
+                 data-img="imagens/modelos/boutique-home.webp" 
+                 data-title="Boutique Digital" 
+                 data-description="Venda estilo com um site que entende de moda. Este modelo é visualmente deslumbrante, criado para marcas de vestuário e acessórios que desejam contar uma história e criar uma experiência de compra única." 
+                 data-old-price="R$ 4.114,12"
+                 data-price="3497.00" 
+                 data-installments="12x de R$ 291,42" 
+                 data-pix-discount="10% OFF no Pix"
+                 data-discount="15% OFF"
+                 data-category="ecommerce"
+                 data-features="Seção 'Lookbook',Lista de Desejos,Filtros específicos para moda,Integração com Instagram,Visualização rápida de produtos"
+                 data-images="imagens/modelos/boutique-home.webp,imagens/modelos/boutique-colecao.webp,imagens/modelos/boutique-lookbook.webp,imagens/modelos/boutique-sacola.webp">
+
+                <div class="portfolio-image-container">
+                    <img src="imagens/modelos/boutique-home.webp" alt="Boutique Digital" class="portfolio-img" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/28a745/ffffff?text=Boutique+Digital';">
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-title">Boutique Digital</h3>
+                    <p class="portfolio-summary"></p>
+                    <div class="portfolio-pricing">
+                        <div class="price-top-line">
+                             <span class="price-old">R$ 4.114,12</span>
+                            <span class="price-discount-badge">15% OFF</span>
+                        </div>
+                        <span class="price-main animated-price" data-final-price="3497.00">R$ 0,00</span>
+                    </div>
+                       <span class="price-installments">12x de R$ 291,42</span>
+                    <span class="btn btn-primary btn-acquire" onclick="gtag('event', 'view_item', {'event_category': 'portfolio_interaction', 'event_label': 'ver_detalhes_boutique_digital'});">Ver Detalhes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ============================================
+        MODAIS
+       ============================================ -->
+
+    <!-- Modal de Serviços -->
+    <div id="service-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Fechar modal">&times;</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <h4>O que está incluso:</h4>
+            <ul id="modal-features" class="service-features"></ul>
+            <div id="modal-price" class="service-price"></div>
+            <a href="#" target="_blank" class="btn btn-primary modal-contact-btn" onclick="gtag('event', 'generate_lead', {'event_category': 'lead_generation', 'event_label': 'whatsapp_solicitation_service_modal'});">
+                <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL DE PORTFÓLIO (ESTRUTURA REVERTIDA E CORRIGIDA)
+         ============================================ -->
+    <div id="portfolio-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Fechar modal">&times;</button>
+            
+            <div class="modal-gallery-container">
+                <img src="" alt="Imagem do Projeto" id="modal-portfolio-img">
+                <button class="gallery-nav prev" id="gallery-prev" aria-label="Imagem anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-nav next" id="gallery-next" aria-label="Próxima imagem"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="modal-content-wrapper">
+                <h3 id="modal-portfolio-title"></h3>
+                <p id="modal-portfolio-description"></p>
+                
+                <div class="modal-features-container">
+                    <h4>O que está incluso:</h4>
+                    <ul id="modal-portfolio-features">
+                        <!-- Features serão injetadas aqui pelo JS -->
+                    </ul>
+                </div>
+                
+                <div class="modal-pricing-info">
+                    <div class="price-label">A partir de</div>
+                    <div class="price-value-container">
+                        <span class="price-old" id="modal-old-price"></span>
+                        <span class="price-discount-badge" id="modal-discount-badge"></span>
+                    </div>
+                    <div class="price-value" id="modal-price-value"></div>
+                    <div class="price-details">
+                        <span id="modal-price-installments"></span>
+                        <span>&bull;</span>
+                        <span id="modal-pix-discount"></span>
+                    </div>
+                </div>
+
+                <a href="#" target="_blank" class="btn btn-primary modal-cta-btn" onclick="gtag('event', 'generate_lead', {'event_category': 'lead_generation', 'event_label': 'whatsapp_solicitation_portfolio_modal'});">
+                    <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+
+<!-- Seção Sobre Nós (Equipe de Desenvolvimento) -->
+<section class="about" id="team">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Nossos Especialistas: <span class="highlight">A Força por Trás do Código</span></h2>
+            <p class="section-subtitle">Conheça a equipe apaixonada por tecnologia e design que dará vida ao seu projeto.</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text reveal">
+                <h3>Nossa Filosofia de Trabalho</h3>
+                <p>A Lumin Interactive nasceu da paixão por criar soluções digitais que realmente fazem a diferença. Mais que uma agência, somos parceiros estratégicos de nossos clientes, mergulhando em seus negócios para entregar resultados que superam expectativas.</p>
+                <p>Nosso diferencial é a criação de projetos sob medida. Analisamos seus objetivos, público e mercado para desenvolver uma estratégia digital única, garantindo que seu investimento se transforme em crescimento real e sustentável.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <h4>Inovação</h4>
+                            <p>Buscamos sempre as melhores tecnologias e tendências do mercado digital.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                         <div>
+                            <h4>Parceria</h4>
+                            <p>Trabalhamos lado a lado com nossos clientes em todas as etapas do projeto.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h4>Resultados</h4>
+                            <p>Focamos em métricas e indicadores que realmente impactam seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image reveal">
+                <img src="imagens/modelos/imagem-index.webp" alt="Equipe Lumin Interactive em reunião" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="team-grid">
+            <div class="team-member reveal">
+                <div class="member-initials"><span>BP</span></div>
+                <h3>Breno de Paula Soares</h3>
+                <p class="member-role">Co-Founder & Backend Developer</p>
+                <p class="member-bio">Desenvolvedor web e cofundador da Lumin Interactive. Responsável pela implementação do backend, contribuindo ativamente para a construção da plataforma desde o zero.</p>
+            </div>
+            
+            <div class="team-member reveal">
+                <div class="member-initials"><span>LF</span></div>
+                <h3>Luiz Fernando Lima</h3>
+                <p class="member-role">Co-Founder & Frontend Designer</p>
+                <p class="member-bio">Designer, desenvolvedor e cofundador da Lumin Interactive. Responsável pela construção do frontend, com foco em interfaces intuitivas, atraentes e centradas no usuário.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Seção Diferenciais -->
+<section class="differentials">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Por Que Escolher a <span class="highlight">Lumin Interactive?</span></h2>
+            <p class="section-subtitle">Nossos pilares garantem um serviço de excelência, do início ao fim do seu projeto.</p>
+        </div>
+        
+        <div class="differentials-grid">
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Design Responsivo</h3>
+                <p>Seu site perfeito em qualquer tela. Garantimos uma experiência impecável para seus usuários em celulares, tablets e desktops.</p>
+            </div>
+            
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Performance Otimizada</h3>
+                <p>Velocidade é tudo. Otimizamos seu site para carregar em um piscar de olhos, melhorando o ranking no Google e a satisfação do usuário.</p>
+            </div>
+            
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-search"></i></div>
+                <h3>SEO Integrado</h3>
+                <p>Construído para ser encontrado. Aplicamos as melhores práticas de SEO para posicionar seu negócio e atrair mais clientes organicamente.</p>
+            </div>
+            
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Segurança de Ponta</h3>
+                <p>Implementamos as mais robustas medidas de segurança para proteger seu site, seus dados e a confiança dos seus clientes.</p>
+            </div>
+            
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-headset"></i></div>
+                <h3>Suporte Dedicado</h3>
+                <p>Estamos sempre aqui para você. Oferecemos um suporte ágil e especializado para garantir que seu site esteja sempre no ar e funcionando.</p>
+            </div>
+            
+            <div class="differential-card reveal">
+                <div class="differential-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Gestão Transparente</h3>
+                <p>Com nossa metodologia ágil, você acompanha cada etapa do desenvolvimento, com entregas claras e comunicação constante.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+
+<!-- Seção de Contato -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info reveal">
+                <h2 class="section-title">Solicite um <span class="highlight">Orçamento</span></h2>
+                <p class="contact-subtitle">Pronto para levar seu negócio para o próximo nível? Entre em contato conosco.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>contato@lumininteractive.com.br</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>(67) 99603-0671</p>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="#" class="social-link" aria-label="Facebook" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'contact_facebook'});"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'contact_instagram'});"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="WhatsApp" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'contact_whatsapp'});"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form reveal">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone (opcional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Selecione um serviço</option>
+                            <option value="website">Website Institucional</option>
+                            <option value="ecommerce">Loja Virtual (E-commerce)</option>
+                            <option value="seo">Otimização SEO</option>
+                            <option value="redesign">Redesign de Site</option>
+                            <option value="other">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre seu projeto..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" onclick="gtag('event', 'generate_lead', {'event_category': 'form_submission', 'event_label': 'contact_form_submit'});">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+
+</main>
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_logo'});">
+                        <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="footer-logo-img">
+                        <span class="logo-text">Lumin Interactive</span>
+                    </a>
+                    <p>Transformando ideias em experiências digitais memoráveis.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_facebook'});"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_instagram'});"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_whatsapp'});"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_inicio'});">Início</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_servicos'});">Serviços</a></li>
+                        <li><a href="portfolio.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_modelos'});">Modelos</a></li>
+                        <li><a href="sobre.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_sobre'});">Sobre Nós</a></li>
+                        <li><a href="contato.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_contato'});">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Nossos Serviços</h3>
+                    <ul>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_reestruturacao'});">Reestruturação de Site</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_manutencao'});">Manutenção Preventiva</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_remocao_virus'});">Remoção de Vírus e Malware</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_firewall'});">Configuração de Firewall e Rede</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contato@lumininteractive.com.br" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_email'});">contato@lumininteractive.com.br</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_whatsapp_contato'});">(67) 99603-0671</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_instagram_contato'});">@lumin.interactive</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Lumin Interactive. Todos os direitos reservados.</p>
+                <p>CNPJ: 62.601.543/0001-11</p>
+                <div class="footer-legal">
+                    <a href="privacidade.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_politica_privacidade'});">Política de Privacidade</a>
+                    <a href="termos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_termos_servico'});">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Botão Voltar ao Topo -->
+<a href="#home" class="back-to-top" id="backToTop" aria-label="Voltar ao topo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'back_to_top'});">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
+
+    <h1>Conteúdo da Página</h1>
+    <p>Role para baixo para ver o banner de cookies aparecer.</p>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Alternar Dark Mode</button>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner-container" class="cookie-banner-container" role="dialog" aria-labelledby="cookie-title" aria-modal="true" hidden>
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h2 id="cookie-title">Aviso de Cookies</h2>
+                <p>
+                    Nosso site usa cookies essenciais e de análise para melhorar sua experiência. Ao clicar em "Entendi", você concorda com o uso de ambos. Para mais detalhes, consulte nossa <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookie-acknowledge-btn" class="cookie-btn-primary" onclick="gtag('event', 'click', {'event_category': 'cookie_consent', 'event_label': 'cookie_banner_acknowledged'});">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Scripts -->
+<script src="js/main.js" defer></script>
+ <script src="js/global.js" defer></script> 
+ <script src="js/cookies.js" defer></script> 
+ 
+ <!-- Registro do Service Worker para Caching e Offline -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registrado com sucesso:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('Falha ao registrar o Service Worker:', error);
+                });
+        });
+    }
+</script>
+
+</body>
+</html>

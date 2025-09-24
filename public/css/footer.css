@@ -1,0 +1,226 @@
+/* =======================================================
+    CSS DO RODAPÉ (VERSÃO ORIGINAL COM RESPONSIVIDADE AJUSTADA)
+    ======================================================= */
+
+/* Variáveis para fácil customização (se não estiverem globais) */
+:root {
+    --footer-bg: #111319;
+    --footer-text: #a0aec0;
+    --footer-heading: #ffffff;
+    --footer-border: rgba(255, 255, 255, 0.1);
+    /* Adicione sua cor primária aqui para consistência */
+    --primary: #6c63ff;
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 0 0;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    /* Layout original para desktop */
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Seção "Sobre" com a logo */
+.footer-about .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--footer-heading);
+}
+
+.footer-about p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Ícones de redes sociais */
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Títulos das seções do rodapé */
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--footer-heading);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+/* Listas de links */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: var(--footer-text);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contact i {
+    color: var(--primary);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Parte inferior do rodapé (Copyright) */
+.footer-bottom {
+    padding: 24px 0;
+    border-top: 1px solid var(--footer-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 24px;
+}
+
+.footer-legal a {
+    color: var(--footer-text);
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-legal a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+
+/* =======================================================
+    RESPONSIVIDADE PARA MOBILE (LAYOUT DA REFERÊNCIA)
+    ======================================================= */
+
+@media (max-width: 992px) {
+    .footer-grid {
+        /* Layout de 2 colunas para tablets e celulares */
+        grid-template-columns: 1fr 1fr;
+        /* A seção sobre ocupa as duas colunas */
+        grid-template-areas:
+            "about about"
+            "links services"
+            "contact contact";
+    }
+
+    .footer-about {
+        grid-area: about;
+    }
+
+    .footer-links {
+        grid-area: links;
+    }
+
+    .footer-services {
+        grid-area: services;
+    }
+
+    .footer-contact {
+        grid-area: contact;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+         /* Layout de 1 coluna para celulares pequenos */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "links"
+            "services"
+            "contact";
+        text-align: center;
+    }
+    
+    .footer h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-about .footer-logo, .footer-social {
+        justify-content: center;
+    }
+}
+

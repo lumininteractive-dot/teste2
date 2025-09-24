@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você está Offline - Lumin Interactive</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="imagens/luminazul.webp" type="image.webp">
+    <link rel="apple-touch-icon" href="imagens/luminazul.webp" sizes="180x180">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Cores e Estilos da sua marca */
+        :root {
+            --primary: #6c63ff;
+            --primary-dark: #4d44db;
+            --secondary: #ff6584;
+            --dark: #2d3748;
+            --gray: #718096;
+            --light-gray: #edf2f7;
+            --lighter-gray: #f7fafc;
+            --white: #ffffff;
+            --error: #f56565;
+            --transition-medium: all 0.3s ease;
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--lighter-gray);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            padding: 50px 40px 40px 40px; /* Ajuste no padding para compensar a remoção */
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .logo-container {
+            margin-bottom: 35px; /* Aumentando a margem inferior do logo */
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            background-color: var(--primary);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-medium);
+        }
+
+        .button:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <!-- Usando a versão colorida do logo para contraste no fundo branco -->
+            <img src="/imagens/logolumiin.webp" alt="Lumin Interactive Logo" class="logo">
+        </div>
+        <h1>Oops! Você está offline.</h1>
+        <p>Parece que não há conexão com a internet. Por favor, verifique sua rede e tente novamente quando estiver conectado.</p>
+        <button class="button" onclick="window.location.reload()">Tentar Novamente</button>
+    </div>
+
+</body>
+</html>
+

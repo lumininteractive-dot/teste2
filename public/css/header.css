@@ -1,0 +1,342 @@
+/* --- Reset Básico e Estilos Globais --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+    padding-top: 72px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* --- Estrutura Principal do Cabeçalho --- */
+.header {
+    background: #1a1a1a;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    position: relative;
+}
+
+/* --- Logo --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    z-index: 1001;
+}
+
+.logo-image {
+    max-height: 40px; /* Altura para mobile */
+    width: auto;
+    transition: max-height 0.3s ease;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: font-size 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        display: none;
+    }
+}
+
+/* --- Navegação (Abordagem Mobile-First) --- */
+.nav-center, .header-right-side {
+    display: none;
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+/* CORREÇÃO DA ANIMAÇÃO DO HAMBÚRGUER PARA "X" */
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+.nav-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.nav-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* --- Menu de Navegação Mobile (Gaveta) --- */
+.mobile-nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a1a1a;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+.mobile-nav .mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-nav .mobile-link {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.mobile-nav .mobile-link:hover,
+.mobile-nav .mobile-link.active {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+/* Estilo de Destaque para o Botão de Orçamento no Menu Mobile */
+.mobile-nav .btn-primary {
+    width: 100%;
+    text-align: center;
+    justify-content: center; /* Adicionado para forçar a centralização */
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 8px;
+    box-shadow: 0 4px 15px rgba(6, 143, 255, 0.2);
+    background-color: #068fff;
+    color: #ffffff;
+}
+
+.mobile-nav .mobile-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.mobile-nav-divider {
+    border-top: 1px solid #333;
+    margin: 16px 0;
+}
+
+
+/* --- Media Query para Telas Maiores (Desktop) --- */
+@media (min-width: 1024px) {
+    .logo-image { max-height: 50px; }
+    .logo-text { font-size: 20px; }
+    .nav-toggle, .mobile-nav { display: none; }
+
+    .nav-center {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #d1d5db;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 8px 12px;
+        position: relative;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #ffffff;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        width: 0;
+        height: 2px;
+        background: #068fff;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: calc(100% - 24px);
+    }
+
+    /* Ações do Cabeçalho (Desktop) */
+    .header-right-side {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Espaçamento entre o botão e o menu kebab */
+    }
+
+    .free-quote-btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background-color: #068fff;
+        color: #ffffff;
+        white-space: nowrap;
+        box-shadow: none;
+    }
+    
+    .free-quote-btn:hover {
+        background-color: #007ae5;
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .settings-menu {
+        position: relative;
+    }
+
+    .settings-toggle {
+        background: none;
+        border: none;
+        color: #d1d5db;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: color 0.3s ease, background 0.3s ease;
+    }
+
+    .settings-toggle:hover,
+    .settings-menu.active .settings-toggle {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+    }
+
+    /* Estilo do Menu Dropdown Melhorado */
+    .settings-dropdown {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 10px);
+        background: #2a2a2e; /* Nova cor de fundo */
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais suave */
+        width: 220px;
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .settings-menu.active .settings-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Aumentar espaçamento interno */
+        padding: 12px 16px; /* Aumentar padding */
+        color: #d1d5db;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+    }
+
+    .dropdown-item i {
+        width: 20px;
+        text-align: center;
+    }
+}
+
+
+
+

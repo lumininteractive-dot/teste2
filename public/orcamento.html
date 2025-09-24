@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Consent Mode - Default Settings -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43JY2MX5EN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-43JY2MX5EN');
+    </script>
+
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Rápido | Lumin Interactive</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Solicite um orçamento rápido e simplificado para seu projeto. Na Lumin Interactive, oferecemos soluções digitais sob medida para o seu negócio.">
+    <meta name="author" content="Lumin Interactive">
+    <link rel="canonical" href="https://www.lumininteractive.com.br/orcamento/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Orçamento Rápido | Lumin Interactive">
+    <meta property="og:description" content="Solicite um orçamento rápido e simplificado para seu projeto.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lumininteractive.com.br/orcamento/">
+    <meta property="og:image" content="imagens/logobrancalumin.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orçamento Rápido | Lumin Interactive">
+    <meta name="twitter:description" content="Solicite um orçamento rápido e simplificado para seu projeto.">
+    <meta name="twitter:image" content="imagens/logobrancalumin.webp">
+
+    <!-- Favicons -->
+    <link rel="icon" href="imagens/luminazul.webp" type="image.webp">
+    <link rel="apple-touch-icon" href="imagens/luminazul.webp" sizes="180x180">
+
+    <!-- Meta Tags Visuais -->
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/orcamento.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css"> 
+    <link rel="stylesheet" href="css/cookies.css">
+
+    <!-- Script Anti-Flicker -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Logo à esquerda -->
+            <a href="/" class="logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_logo_orcamento'});">
+                <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="logo-image" style="height: 60px;">
+                <span class="logo-text">Lumin Interactive</span>
+            </a>
+
+            <!-- Navegação central (visível apenas no desktop) -->
+            <nav class="nav-center" id="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_inicio_orcamento'});">Inicio</a></li>
+                    <li><a href="servicos.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_servicos_orcamento'});">Serviços</a></li>
+                    <li><a href="portfolio.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_modelos_orcamento'});">Modelos</a></li>
+                    <li><a href="sobre.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_sobre_orcamento'});">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_contato_orcamento'});">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações e Menu à Direita (Desktop) -->
+            <div class="header-right-side">
+                <a href="orcamento.html" class="btn btn-primary free-quote-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'header_orcamento_gratis_orcamento_page'});">Orçamento Grátis</a>
+                <div class="settings-menu" id="settings-menu">
+                    <button class="settings-toggle" id="settings-toggle" aria-label="Abrir opções">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="settings-dropdown">
+                        <a href="#" class="dropdown-item" id="dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_desktop_orcamento'});">
+                            <i class="fas fa-adjust"></i>
+                            <span id="dark-mode-text">Modo Escuro</span>
+                        </a>
+                        <a href="config.html" class="dropdown-item" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_configuracoes_orcamento'});">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" id="mobile-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile (conteúdo) -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-menu">
+                <li><a href="index.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_inicio_orcamento'});"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="servicos.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_servicos_orcamento'});"><i class="fas fa-briefcase"></i>Serviços</a></li>
+                <li><a href="portfolio.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_modelos_orcamento'});"><i class="fas fa-layer-group"></i>Modelos</a></li>
+                <li><a href="sobre.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_sobre_orcamento'});"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                <li><a href="contato.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_contato_orcamento'});"><i class="fas fa-envelope"></i>Contato</a></li>
+                <li><a href="orcamento.html" class="btn btn-primary mobile-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'mobile_orcamento_gratis_orcamento_page'});">Orçamento Grátis</a></li>
+            </ul>
+            <div class="mobile-nav-divider"></div>
+            <ul class="mobile-menu">
+                <li><a href="#" class="mobile-link" id="mobile-dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_mobile_orcamento'});"><i class="fas fa-adjust"></i><span id="mobile-dark-mode-text">Modo Escuro</span></a></li>
+                <li><a href="config.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_configuracoes_orcamento'});"><i class="fas fa-cog"></i>Configurações</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section fade-in-element">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1><span class="highlight">Orçamento Rápido</span> do Projeto</h1>
+                    <p>Preencha as etapas abaixo para nos contar sobre seu projeto. É rápido, fácil e nos dá as informações essenciais para começar.</p>
+                    <a href="#budgetForm" class="btn btn-primary hero-cta" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'hero_comecar_agora_orcamento'});">Começar Agora <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="hero-image">
+                    <svg width="100%" height="100%" viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--primary-light);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--primary);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <rect x="50" y="20" width="300" height="310" rx="20" ry="20" fill="var(--surface-primary)" stroke="var(--border-primary)" stroke-width="2"/>
+                            
+                            <rect x="70" y="40" width="200" height="20" rx="5" ry="5" fill="url(#grad1)"/>
+                            
+                            <rect x="70" y="80" width="260" height="10" rx="5" ry="5" fill="var(--border-primary)"/>
+                            <rect x="70" y="100" width="260" height="10" rx="5" ry="5" fill="var(--border-primary)"/>
+                            <rect x="70" y="120" width="180" height="10" rx="5" ry="5" fill="var(--border-primary)"/>
+                            
+                            <circle cx="85" cy="165" r="12" fill="var(--border-primary)"/>
+                            <rect x="110" y="160" width="220" height="10" rx="5" ry="5" fill="var(--border-primary)"/>
+                            
+                            <circle cx="85" cy="205" r="12" fill="var(--primary-light-rgba)" stroke="var(--primary)" stroke-width="2"/>
+                            <circle cx="85" cy="205" r="5" fill="var(--primary)"/>
+                            <rect x="110" y="200" width="220" height="10" rx="5" ry="5" fill="var(--primary-light-rgba)"/>
+                            
+                            <rect x="70" y="250" width="120" height="40" rx="10" ry="10" fill="var(--border-primary)"/>
+                            <rect x="210" y="250" width="120" height="40" rx="10" ry="10" fill="var(--primary)"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Steps -->
+        <section class="progress-steps fade-in-element">
+            <div class="container">
+                <div class="steps-container">
+                    <div class="step active" data-step="1"><div class="step-number">1</div><div class="step-text">Contato</div></div>
+                    <div class="step" data-step="2"><div class="step-number">2</div><div class="step-text">Projeto</div></div>
+                    <div class="step" data-step="3"><div class="step-number">3</div><div class="step-text">Detalhes</div></div>
+                    <div class="step" data-step="4"><div class="step-number">4</div><div class="step-text">Revisão</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section fade-in-element">
+            <div class="container">
+                <form id="budgetForm" novalidate>
+                    
+                    <!-- Etapa 1: Informações de Contato -->
+                    <div class="form-step active" data-step="1">
+                        <h2><i class="fas fa-user-circle"></i>Informações de Contato</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Nome Completo</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Empresa (Opcional)</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                             <div class="form-group">
+                                <label for="cnpj">CNPJ (Opcional)</label>
+                                <input type="text" id="cnpj" name="cnpj">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary btn-next" data-next="2" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step1_next'});">Avançar <i class="fas fa-arrow-right"></i></button>
+                            <button type="button" class="btn btn-primary btn-back-review" data-goto="4" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step1_back_to_review'});">Voltar para Revisão</button>
+                        </div>
+                    </div>
+
+                    <!-- Etapa 2: Sobre o Projeto -->
+                    <div class="form-step" data-step="2">
+                        <h2><i class="fas fa-lightbulb"></i>Sobre o Projeto</h2>
+                        <div class="form-group">
+                            <label for="projectName">Que tipo de projeto você precisa?</label>
+                            <input type="text" id="projectName" name="projectName" placeholder="Ex: Site Institucional, Loja Virtual, Landing Page" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDescription">Descreva brevemente o seu projeto</label>
+                            <textarea id="projectDescription" name="projectDescription" placeholder="Fale sobre seu negócio, seus objetivos e o que espera do projeto." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="mainAction">Qual é a principal ação que você quer que o usuário realize?</label>
+                            <select id="mainAction" name="mainAction" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Entrar em contato / Pedir orçamento">Entrar em contato / Pedir orçamento</option>
+                                <option value="Comprar um produto">Comprar um produto</option>
+                                <option value="Agendar um serviço">Agendar um serviço</option>
+                                <option value="Se inscrever em uma newsletter">Se inscrever em uma newsletter</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="1" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step2_prev'});"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn btn-primary btn-next" data-next="3" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step2_next'});">Avançar <i class="fas fa-arrow-right"></i></button>
+                            <button type="button" class="btn btn-primary btn-back-review" data-goto="4" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step2_back_to_review'});">Voltar para Revisão</button>
+                        </div>
+                    </div>
+
+                    <!-- Etapa 3: Detalhes e Referências -->
+                    <div class="form-step" data-step="3">
+                        <h2><i class="fas fa-cogs"></i>Detalhes e Referências</h2>
+                        <div class="form-group">
+                            <label>Você já possui um site?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="hasWebsite" value="Sim"><span>Sim</span></label>
+                                <label><input type="radio" name="hasWebsite" value="Não" checked><span>Não</span></label>
+                            </div>
+                        </div>
+                        <div class="conditional" data-condition="hasWebsite" data-value="Sim">
+                            <div class="form-group">
+                                <label for="websiteUrl">Qual o link do seu site atual?</label>
+                                <input type="url" id="websiteUrl" name="websiteUrl" placeholder="https://www.seusite.com.br">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="likedSites">Cite alguns sites que você gosta (referências de design ou funcionalidade)</label>
+                            <textarea id="likedSites" name="likedSites" placeholder="Cole os links aqui."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="features">Existe alguma funcionalidade essencial que seu projeto precisa ter?</label>
+                            <textarea id="features" name="features" placeholder="Ex: Integração com sistema de pagamentos, blog, área de membros, etc."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryDeadline">Qual é o prazo ideal para a entrega?</label>
+                            <select id="deliveryDeadline" name="deliveryDeadline">
+                                <option value="" disabled selected>Selecione o prazo</option>
+                                <option value="Urgente (1-2 semanas)">Urgente (1-2 semanas)</option>
+                                <option value="Padrão (3-4 semanas)">Padrão (3-4 semanas)</option>
+                                <option value="Flexível (Acima de 1 mês)">Flexível (Acima de 1 mês)</option>
+                                <option value="Ainda estou planejando">Ainda estou planejando</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Desejam agendar uma reunião conosco para falar sobre o projeto?</label>
+                             <div class="radio-group">
+                                <label><input type="radio" name="scheduleMeeting" value="Sim, gostaria de agendar"><span>Sim, gostaria de agendar</span></label>
+                                <label><input type="radio" name="scheduleMeeting" value="Não, prefiro contato por texto" checked><span>Não, prefiro contato por texto</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="estimatedBudget">Qual sua faixa de orçamento para este projeto?</label>
+                            <select id="estimatedBudget" name="estimatedBudget" required>
+                                <option value="" disabled selected>Selecione uma faixa de valor</option>
+                                <option value="Até R$1.000">Até R$1.000</option>
+                                <option value="R$1.000 - R$2.500">R$1.000 - R$2.500</option>
+                                <option value="R$2.500 - R$5.000">R$2.500 - R$5.000</option>
+                                <option value="Acima de R$5.000">Acima de R$5.000</option>
+                                <option value="Prefiro não informar">Prefiro não informar</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="2" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step3_prev'});"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn btn-primary btn-next" data-next="4" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step3_next_review'});">Revisar Informações <i class="fas fa-check"></i></button>
+                             <button type="button" class="btn btn-primary btn-back-review" data-goto="4" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step3_back_to_review'});">Voltar para Revisão</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Etapa 4: Revisão e Envio -->
+                    <div class="form-step" data-step="4">
+                        <h2><i class="fas fa-clipboard-check"></i>Revisão e Envio</h2>
+                        <div class="review-container">
+                            <div class="review-header">
+                                <h3>Confira se todas as informações estão corretas.</h3>
+                                <p>Você pode editar qualquer seção antes de enviar.</p>
+                            </div>
+
+                            <div class="review-section">
+                                <div class="review-section-header">
+                                    <h4><i class="fas fa-user-circle"></i>Contato</h4>
+                                    <button class="btn-edit" data-goto="1" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_review_edit_contato'});"><i class="fas fa-pen"></i> Editar</button>
+                                </div>
+                                <div class="review-content" id="review-contact-info"></div>
+                            </div>
+
+                            <div class="review-section">
+                                <div class="review-section-header">
+                                    <h4><i class="fas fa-lightbulb"></i>Projeto</h4>
+                                    <button class="btn-edit" data-goto="2" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_review_edit_projeto'});"><i class="fas fa-pen"></i> Editar</button>
+                                </div>
+                                <div class="review-content" id="review-project-info"></div>
+                            </div>
+
+                            <div class="review-section">
+                                <div class="review-section-header">
+                                    <h4><i class="fas fa-cogs"></i>Detalhes</h4>
+                                    <button class="btn-edit" data-goto="3" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_review_edit_detalhes'});"><i class="fas fa-pen"></i> Editar</button>
+                                </div>
+                                <div class="review-content" id="review-details-info"></div>
+                            </div>
+
+                            <div class="terms-group">
+                                <label>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span>Estou ciente de que este é um pedido de orçamento e não um contrato fechado.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary btn-prev" data-prev="3" onclick="gtag('event', 'click', {'event_category': 'form_interaction', 'event_label': 'form_step4_review_prev'});"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="submit" class="btn btn-primary btn-submit" onclick="gtag('event', 'generate_lead', {'event_category': 'lead_generation', 'event_label': 'orcamento_form_submit'});">
+                                <i class="fab fa-whatsapp"></i> Enviar Pedido de Orçamento
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+ <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_logo_orcamento'});">
+                        <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="footer-logo-img">
+                        <span class="logo-text">Lumin Interactive</span>
+                    </a>
+                    <p>Transformando ideias em experiências digitais memoráveis.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_facebook_orcamento'});"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_instagram_orcamento'});"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_whatsapp_orcamento'});"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_inicio_orcamento'});">Início</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_servicos_orcamento'});">Serviços</a></li>
+                        <li><a href="portfolio.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_modelos_orcamento'});">Modelos</a></li>
+                        <li><a href="sobre.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_sobre_orcamento'});">Sobre Nós</a></li>
+                        <li><a href="contato.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_contato_orcamento'});">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Nossos Serviços</h3>
+                    <ul>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_reestruturacao_orcamento'});">Reestruturação de Site</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_manutencao_orcamento'});">Manutenção Preventiva</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_remocao_virus_orcamento'});">Remoção de Vírus e Malware</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_firewall_orcamento'});">Configuração de Firewall e Rede</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contato@lumininteractive.com.br" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_email_orcamento'});">contato@lumininteractive.com.br</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_whatsapp_contato_orcamento'});">(67) 99603-0671</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_instagram_contato_orcamento'});">@lumin.interactive</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Lumin Interactive. Todos os direitos reservados.</p>
+                <p>CNPJ: 62.601.543/0001-11</p>
+                <div class="footer-legal">
+                    <a href="privacidade.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_politica_privacidade_orcamento'});">Política de Privacidade</a>
+                    <a href="termos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_termos_servico_orcamento'});">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back To Top -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'back_to_top_orcamento'});"><i class="fas fa-arrow-up"></i></a>
+    
+       <!-- Banner de Cookies Simplificado -->
+    <div id="cookie-banner-container" class="cookie-banner-container" role="dialog" aria-labelledby="cookie-title" aria-modal="true" hidden>
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h2 id="cookie-title">Aviso de Cookies</h2>
+                <p>
+                    Nosso site usa cookies essenciais e de análise para melhorar sua experiência. Ao clicar em "Entendi", você concorda com o uso de ambos. Para mais detalhes, consulte nossa <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookie-acknowledge-btn" class="cookie-btn-primary" onclick="gtag('event', 'click', {'event_category': 'cookie_consent', 'event_label': 'cookie_banner_acknowledged_orcamento'});">Entendi</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/orcamento.js" defer></script>
+    <script src="js/global.js" defer></script> 
+    <script src="js/cookies.js" defer></script>
+
+     <!-- REGISTRO DO SERVICE WORKER (PARA CACHE E OFFLINE) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

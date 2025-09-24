@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Consent Mode - Default Settings -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43JY2MX5EN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-43JY2MX5EN');
+    </script>
+
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Lumin Interactive</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Conheça a história e a equipe da Lumin Interactive. Somos apaixonados por tecnologia e dedicados a criar soluções digitais incríveis.">
+    <meta name="author" content="Lumin Interactive">
+    <link rel="canonical" href="https://www.lumininteractive.com.br/sobre/">
+
+    <!-- Open Graph (para Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Sobre Nós | Lumin Interactive">
+    <meta property="og:description" content="Conheça a história e a equipe da Lumin Interactive. Somos apaixonados por tecnologia e dedicados a criar soluções digitais incríveis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lumininteractive.com.br/sobre/">
+    <meta property="og:image" content="imagens/logobrancalumin.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sobre Nós | Lumin Interactive">
+    <meta name="twitter:description" content="Conheça a história e a equipe da Lumin Interactive. Somos apaixonados por tecnologia e dedicados a criar soluções digitais incríveis.">
+    <meta name="twitter:image" content="imagens/logobrancalumin.webp">
+
+    <!-- Favicons -->
+    <link rel="icon" href="imagens/luminazul.webp" type="image.webp">
+    <link rel="apple-touch-icon" href="imagens/luminazul.webp" sizes="180x180">
+
+    <!-- Cor da Barra de Endereço (Mobile) -->
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Otimização de Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Carregamento assíncrono do Font Awesome para não bloquear a renderização -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Seus Arquivos CSS -->
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cookies.css"> 
+
+
+    <!-- SCRIPT PARA EVITAR FLASH DE TEMA -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <!-- SCRIPT ANTI-FLICKER (ESSENCIAL PARA TEMA E DADOS DO USUÁRIO) -->
+    <script>
+        (function() {
+            // 1. Aplica o tema (Modo Escuro) antes da renderização
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+
+            // 2. Prepara para a atualização dos dados do usuário
+            const style = document.createElement('style');
+            style.textContent = `
+                #user-avatar-header, 
+                #user-shortname-header,
+                .mobile-user-avatar,
+                .mobile-user-toggle span {
+                    visibility: hidden; /* Esconde para evitar o "flash" de conteúdo antigo */
+                }
+            `;
+            document.head.appendChild(style);
+        })(); 
+    </script>
+
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Logo à esquerda -->
+            <a href="/" class="logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_logo_sobre'});">
+                <!-- Otimização: Adicionado width, height e decoding="async" para a imagem do logo -->
+                <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="logo-image" style="height: 60px;" width="240" height="60" decoding="async">
+                <span class="logo-text">Lumin Interactive</span>
+            </a>
+
+            <!-- Navegação central (visível apenas no desktop) -->
+            <nav class="nav-center" id="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_inicio_sobre'});">Inicio</a></li>
+                    <li><a href="servicos.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_servicos_sobre'});">Serviços</a></li>
+                    <li><a href="portfolio.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_modelos_sobre'});">Modelos</a></li>
+                    <li><a href="sobre.html" class="nav-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_sobre_sobre'});">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_contato_sobre'});">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações e Menu à Direita (Desktop) -->
+            <div class="header-right-side">
+                <a href="orcamento.html" class="btn btn-primary free-quote-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'header_orcamento_gratis_sobre'});">Orçamento Grátis</a>
+                <div class="settings-menu" id="settings-menu">
+                    <button class="settings-toggle" id="settings-toggle" aria-label="Abrir opções">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="settings-dropdown">
+                        <a href="#" class="dropdown-item" id="dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_desktop_sobre'});">
+                            <i class="fas fa-adjust"></i>
+                            <span id="dark-mode-text">Modo Escuro</span>
+                        </a>
+                        <a href="config.html" class="dropdown-item" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_configuracoes_sobre'});">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" id="mobile-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile (conteúdo) -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-menu">
+                <li><a href="index.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_inicio_sobre'});"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="servicos.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_servicos_sobre'});"><i class="fas fa-briefcase"></i>Serviços</a></li>
+                <li><a href="portfolio.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_modelos_sobre'});"><i class="fas fa-layer-group"></i>Modelos</a></li>
+                <li><a href="sobre.html" class="mobile-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_sobre_sobre'});"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                <li><a href="contato.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_contato_sobre'});"><i class="fas fa-envelope"></i>Contato</a></li>
+                <li><a href="orcamento.html" class="btn btn-primary mobile-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'mobile_orcamento_gratis_sobre'});">Orçamento Grátis</a></li>
+            </ul>
+            <div class="mobile-nav-divider"></div>
+            <ul class="mobile-menu">
+                <li><a href="#" class="mobile-link" id="mobile-dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_mobile_sobre'});"><i class="fas fa-adjust"></i><span id="mobile-dark-mode-text">Modo Escuro</span></a></li>
+                <li><a href="config.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_configuracoes_sobre'});"><i class="fas fa-cog"></i>Configurações</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <!-- Conteúdo da Página -->
+    <main>
+        <!-- Hero Section Premium - Sobre Nós -->
+        <section class="about-hero">
+    <div class="hero-container">
+        <div class="hero-content fade-in-element">
+            <h1 class="hero-title">Nossa Jornada, <span class="highlight">Nossa Essência</span></h1>
+            <p class="hero-subtitle">Na Lumin Interactive, somos movidos por propósito: transformar ideias em soluções digitais únicas. Cada linha de código reflete nosso compromisso com inovação, excelência e parceria.</p>
+            <div class="hero-stats fade-in-element">
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Tecnologia Autoral</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+360</div>
+                    <div class="stat-label">Horas de Desenvolvimento</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">DNA Lumin</div>
+                    <div class="stat-label">Criatividade, Agilidade e Técnica</div>
+                </div>
+            </div>
+                    <div class="hero-cta">
+                        <a href="#nossa-equipe" class="btn btn-primary btn-lg pulse" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'hero_nossa_equipe_sobre'});">Nossa Equipe <i class="fas fa-arrow-down"></i></a>
+                        <a href="#valores" class="btn btn-secondary btn-lg" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'hero_nossos_valores_sobre'});">Nossos Valores</a>
+                    </div>
+                </div>
+                <div class="hero-media fade-in-element">
+                    <div class="hero-image-wrapper">
+                        <!-- Otimização: Adicionado width, height e decoding="async" para a imagem principal -->
+                        <img src="imagens/sobreimagem.webp" alt="Equipe Lumin Interactive" class="hero-image" width="600" height="400" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Imagem+Indisponível';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossa Equipe -->
+        <section class="our-team" id="nossa-equipe">
+            <div class="container">
+                <div class="section-intro fade-in-element">
+                    <h2 class="section-title">As Mentes por Trás do Código</h2>
+                    <p class="section-subtitle">Somos co-fundadores, desenvolvedores e parceiros na missão de criar o futuro digital.</p>
+                </div>
+
+                <div class="team-founders-grid">
+                    <!-- Founder 1: Luiz -->
+                    <div class="founder-card fade-in-element">
+                        <div class="founder-header">
+                            <div class="founder-avatar">LF</div>
+                            <div class="founder-title">
+                                <h3>Luiz Fernando Lima</h3>
+                                <span class="founder-role">CEO & Co-Fundador</span>
+                            </div>
+                        </div>
+                        <div class="founder-body">
+                            <p>Focado na experiência do usuário e no impacto visual, Luiz lidera o desenvolvimento front-end. Transforma conceitos em interfaces intuitivas e responsivas, garantindo que cada projeto não só funcione bem, mas também encante o usuário.</p>
+                        </div>
+                        <div class="founder-footer">
+                            <div class="founder-skills">
+                                <span><i class="fas fa-palette"></i> UI/UX Design</span>
+                                <span><i class="fab fa-react"></i> Front-End</span>
+                                <span><i class="fas fa-lightbulb"></i> Inovação</span>
+                            </div>
+                            <div class="founder-social">
+                                 <a href="https://www.instagram.com/luizfernandolima0/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'team_instagram_luiz_sobre'});"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Github" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'team_github_luiz_sobre'});"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder 2: Breno -->
+                    <div class="founder-card fade-in-element">
+                        <div class="founder-header">
+                            <div class="founder-avatar">BP</div>
+                            <div class="founder-title">
+                                <h3>Breno de Paula Soares</h3>
+                                <span class="founder-role">CEO & Co-Fundador</span>
+                            </div>
+                        </div>
+                        <div class="founder-body">
+                            <p>Responsável pela arquitetura e lógica dos sistemas, Breno comanda o back-end. Com expertise em performance e segurança, ele constrói a base sólida que sustenta todas as nossas soluções digitais, garantindo escalabilidade e robustez.</p>
+                        </div>
+                        <div class="founder-footer">
+                            <div class="founder-skills">
+                                <span><i class="fas fa-server"></i> Back-End</span>
+                                <span><i class="fas fa-shield-alt"></i> Segurança</span>
+                                <span><i class="fas fa-briefcase"></i> Gestão</span>
+                            </div>
+                            <div class="founder-social">
+                                <a href="https://www.instagram.com/breno.deps/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'team_instagram_breno_sobre'});"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Github" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'team_github_breno_sobre'});"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citação da Filosofia -->
+                <div class="philosophy-statement fade-in-element">
+                        <div class="philosophy-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Unimos a lógica e a criatividade para construir o futuro digital. Acreditamos que um sistema robusto ganha vida através de interfaces bem pensadas. Nosso compromisso é tornar a tecnologia acessível, funcional e impactante para qualquer negócio."</p>
+                    <span><strong>Lumin Interactive</strong> - Nossa Filosofia</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção Nossos Valores -->
+        <section class="our-values" id="valores">
+            <div class="container">
+                <div class="section-intro fade-in-element">
+                    <h2 class="section-title">Nossos Valores</h2>
+                    <p class="section-subtitle">Princípios que fundamentam tudo o que fazemos na Lumin Interactive.</p>
+                </div>
+                <div class="values-container">
+                    <!-- Itens de valores -->
+                    <div class="value-item fade-in-element">
+                        <div class="value-icon"><i class="fas fa-code"></i></div>
+                        <div class="value-content">
+                            <h3>Propriedade do Código</h3>
+                            <p>Acreditamos que nossos clientes devem ter total controle sobre seus sites, por isso oferecemos acesso ao código-fonte completo para quem compra nossos modelos.</p>
+                        </div>
+                    </div>
+                    <div class="value-item fade-in-element">
+                        <div class="value-icon"><i class="fas fa-lock"></i></div>
+                        <div class="value-content">
+                            <h3>Segurança em Primeiro Lugar</h3>
+                            <p>Nossa hospedagem VPS garante que os sites dos clientes estejam protegidos contra ameaças comuns de plataformas compartilhadas.</p>
+                        </div>
+                    </div>
+                    <div class="value-item fade-in-element">
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="value-content">
+                            <h3>Inovação Constante</h3>
+                            <p>Estamos sempre explorando novas tecnologias e abordagens para oferecer as melhores soluções para nossos clientes.</p>
+                        </div>
+                    </div>
+                    <div class="value-item fade-in-element">
+                        <div class="value-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <div class="value-content">
+                            <h3>Transparência Financeira</h3>
+                            <p>Oferecemos planos claros e preços justos, sem custos ocultos ou surpresas desagradáveis para nossos clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_logo_sobre'});">
+                        <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="footer-logo-img">
+                        <span class="logo-text">Lumin Interactive</span>
+                    </a>
+                    <p>Transformando ideias em experiências digitais memoráveis.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_facebook_sobre'});"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_instagram_sobre'});"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_whatsapp_sobre'});"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_inicio_sobre'});">Início</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_servicos_sobre'});">Serviços</a></li>
+                        <li><a href="portfolio.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_modelos_sobre'});">Modelos</a></li>
+                        <li><a href="sobre.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_sobre_sobre'});">Sobre Nós</a></li>
+                        <li><a href="contato.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_contato_sobre'});">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Nossos Serviços</h3>
+                    <ul>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_reestruturacao_sobre'});">Reestruturação de Site</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_manutencao_sobre'});">Manutenção Preventiva</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_remocao_virus_sobre'});">Remoção de Vírus e Malware</a></li>
+                        <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_firewall_sobre'});">Configuração de Firewall e Rede</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contato@lumininteractive.com.br" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_email_sobre'});">contato@lumininteractive.com.br</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_whatsapp_contato_sobre'});">(67) 99603-0671</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_instagram_contato_sobre'});">@lumin.interactive</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Lumin Interactive. Todos os direitos reservados.</p>
+                <p>CNPJ: 62.601.543/0001-11</p>
+                <div class="footer-legal">
+                    <a href="privacidade.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_politica_privacidade_sobre'});">Política de Privacidade</a>
+                    <a href="termos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_termos_servico_sobre'});">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="back-to-top" id="back-to-top" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'back_to_top_sobre'});">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+        <!-- Banner de Cookies Simplificado -->
+    <div id="cookie-banner-container" class="cookie-banner-container" role="dialog" aria-labelledby="cookie-title" aria-modal="true" hidden>
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h2 id="cookie-title">Aviso de Cookies</h2>
+                <p>
+                    Nosso site usa cookies essenciais e de análise para melhorar sua experiência. Ao clicar em "Entendi", você concorda com o uso de ambos. Para mais detalhes, consulte nossa <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookie-acknowledge-btn" class="cookie-btn-primary" onclick="gtag('event', 'click', {'event_category': 'cookie_consent', 'event_label': 'cookie_banner_acknowledged_sobre'});">Entendi</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/sobre.js" defer></script>
+    <script src="js/global.js" defer></script> 
+    <script src="js/cookies.js" defer></script>
+
+     <!-- REGISTRO DO SERVICE WORKER (PARA CACHE E OFFLINE) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

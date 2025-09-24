@@ -1,0 +1,345 @@
+/* =============================================== */
+/* 1. VARIÁVEIS GLOBAIS E RESET                  */
+/* =============================================== */
+:root {
+    /* Cores */
+    --primary-color: #6c63ff;
+    --primary-hover: #4d44db;
+    --success-color: #10b981;
+    --white-color: #fff;
+    --black-color: #1a1a1a;
+
+    /* Padrões de Design */
+    --font-main: 'Poppins', sans-serif;
+    --transition: all 0.3s ease;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    /* Variáveis Semânticas para Light Mode (Modo Claro) */
+    --text-heading: #1e293b;
+    --text-body: #475569;
+    --text-muted: #64748b;
+    --bg-main: #f8fafc;
+    --surface-primary: #ffffff;
+    --surface-secondary: #f1f5f9;
+    --border-color: #e2e8f0;
+}
+
+/* Definição das variáveis para o Modo Escuro */
+html.dark-mode {
+    --text-heading: #f1f5f9;
+    --text-body: #94a3b8;
+    --text-muted: #64748b;
+    --bg-main: #111827;
+    --surface-primary: #1f2937;
+    --surface-secondary: #374151;
+    --border-color: #4b5563;
+}
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 0 15px; }
+h1, h2 { color: var(--text-heading); font-weight: 600; }
+a { text-decoration: none; color: var(--primary-color); transition: var(--transition); }
+
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+  background-color: transparent; /* Fundo da barra de rolagem (track) - transparente para se misturar ao body */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6c63ff; /* Cor da "thumb" (a barra que você arrasta) */
+  border-radius: 10px; /* Borda arredondada da thumb */
+  border: 3px solid white; /* Borda em volta da thumb, para destacá-la do fundo */
+}
+
+/* No Dark Mode, ajustar a cor da borda da thumb para contraste */
+html.dark-mode body::-webkit-scrollbar-thumb {
+    border-color: #edf2f7; /* Ajusta a borda no modo escuro */
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin; /* Largura da barra de rolagem (thin, auto ou none) */
+  scrollbar-color: #6c63ff transparent; /* thumb track (cor da barra que rola / cor do fundo) */
+}
+
+
+/* =============================================== */
+/* 2. CABEÇALHO (NOVO)                           */
+/* =============================================== */
+.header { 
+    background: var(--black-color); 
+    color: var(--white-color); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+.header-inner { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 72px; 
+}
+
+/* Aumenta a largura do container do cabeçalho para melhor espaçamento em telas maiores */
+.header .container {
+    max-width: 1200px;
+}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none; 
+    color: var(--white-color); 
+}
+.logo-text { 
+    font-size: 20px; 
+    font-weight: 600; 
+}
+
+/* Novo Menu de Opções */
+.options-menu { 
+    position: relative; 
+}
+.options-toggle { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: white; 
+    font-size: 1.2rem;
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    transition: background 0.3s; 
+}
+.options-toggle:hover { 
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.options-dropdown { 
+    position: absolute; 
+    right: 0; 
+    top: 120%; 
+    background: var(--black-color); 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-lg); 
+    width: 220px; 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(10px); 
+    transition: all 0.3s ease; 
+    z-index: 1001; 
+}
+.options-menu.active .options-dropdown { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+}
+.dropdown-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 12px 15px; 
+    text-decoration: none; 
+    color: #d1d5db; 
+    font-size: 0.9rem; 
+}
+.dropdown-item:hover { 
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: var(--primary-color); 
+}
+
+/* =============================================== */
+/* 3. LAYOUT E CONTEÚDO                          */
+/* =============================================== */
+.settings-container { 
+    padding: 60px 0; 
+    min-height: 100vh;
+}
+
+.settings-header { 
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+.settings-header h1 { 
+    font-size: 2.2rem; 
+    margin-bottom: 10px;
+}
+.settings-subtitle { 
+    color: var(--text-muted); 
+    font-size: 1.1rem; 
+}
+
+/* =============================================== */
+/* 4. CONTEÚDO E CARDS                           */
+/* =============================================== */
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.settings-card {
+    background-color: var(--surface-primary);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-title i {
+    color: var(--primary-color);
+}
+.section-description {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* =============================================== */
+/* 5. SELETOR DE TEMA                            */
+/* =============================================== */
+.theme-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.theme-option input {
+    display: none; /* Esconde o radio button real */
+}
+
+.theme-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+}
+
+.theme-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.theme-option input:checked + .theme-card {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-color-light-rgba, rgba(108, 99, 255, 0.2));
+}
+
+.theme-preview {
+    height: 80px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+.light-preview { background-color: #f8fafc; }
+.dark-preview { background-color: #1f2937; }
+
+.preview-line-sm, .preview-line-lg {
+    height: 8px;
+    border-radius: 4px;
+}
+.preview-line-sm { width: 50%; }
+.preview-line-lg { width: 80%; }
+.light-preview div { background-color: #e2e8f0; }
+.dark-preview div { background-color: #4b5563; }
+
+.theme-card span {
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--success-color);
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: var(--transition);
+}
+
+.theme-option input:checked + .theme-card .checkmark {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =============================================== */
+/* 6. SEÇÃO LEGAL                                */
+/* =============================================== */
+.legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.legal-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--surface-secondary);
+    border-radius: var(--radius-md);
+    color: var(--text-heading);
+    font-weight: 500;
+}
+.legal-link:hover {
+    background-color: var(--border-color);
+    color: var(--primary-color);
+}
+.legal-link i:first-child {
+    font-size: 1.2rem;
+    width: 30px;
+    color: var(--text-muted);
+}
+.legal-link .arrow {
+    margin-left: auto;
+    color: var(--text-muted);
+}
+.legal-link:hover .arrow {
+    color: var(--primary-color);
+}
+
+/* =============================================== */
+/* 7. RESPONSIVIDADE                             */
+/* =============================================== */
+@media (max-width: 600px) {
+    .settings-header h1 { font-size: 1.8rem; }
+    .settings-subtitle { font-size: 1rem; }
+    .settings-card { padding: 20px; }
+    .theme-selector { grid-template-columns: 1fr; }
+
+    /* CORREÇÃO: Esconde o texto do logo em telas menores, mantendo só o ícone */
+    .logo-text {
+        display: none;
+    }
+}
+

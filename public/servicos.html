@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Consent Mode - Default Settings -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43JY2MX5EN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-43JY2MX5EN');
+    </script>
+
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços | Lumin Interactive</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Descubra nossos serviços especializados em desenvolvimento web, TI, e soluções digitais personalizadas para o seu negócio.">
+    <meta name="author" content="Lumin Interactive">
+    <link rel="canonical" href="https://www.lumininteractive.com.br/servicos/">
+
+    <!-- Open Graph (para Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Nossos Serviços | Lumin Interactive">
+    <meta property="og:description" content="Descubra nossos serviços especializados em desenvolvimento web, TI, e soluções digitais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lumininteractive.com.br/servicos/">
+    <meta property="og:image" content="imagens/logobrancalumin.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nossos Serviços | Lumin Interactive">
+    <meta name="twitter:description" content="Descubra nossos serviços especializados em desenvolvimento web, TI, e soluções digitais.">
+    <meta name="twitter:image" content="imagens/logobrancalumin.webp">
+
+    <!-- Favicons -->
+    <link rel="icon" href="imagens/luminazul.webp" type="image.webp">
+    <link rel="apple-touch-icon" href="imagens/luminazul.webp" sizes="180x180">
+
+    <!-- Cor da Barra de Endereço (Mobile) -->
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Seus Arquivos CSS -->
+    <link rel="stylesheet" href="css/servicos.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cookies.css">
+
+    <!-- SCRIPT ANTI-FLICKER (ESSENCIAL PARA TEMA E DADOS DO USUÁRIO) -->
+    <script>
+        (function() {
+            // 1. Aplica o tema (Modo Escuro) antes da renderização
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+
+            // 2. Prepara para a atualização dos dados do usuário
+            const style = document.createElement('style');
+            style.textContent = `
+                #user-avatar-header, 
+                #user-shortname-header,
+                .mobile-user-avatar,
+                .mobile-user-toggle span {
+                    visibility: hidden;
+                }
+            `;
+            document.head.appendChild(style);
+        })();
+    </script>
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Logo à esquerda -->
+            <a href="/" class="logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_logo_servicos'});">
+                <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="logo-image" style="height: 60px;">
+                <span class="logo-text">Lumin Interactive</span>
+            </a>
+
+            <!-- Navegação central (visível apenas no desktop) -->
+            <nav class="nav-center" id="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_inicio_servicos_page'});">Inicio</a></li>
+                    <li><a href="servicos.html" class="nav-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_servicos_servicos_page'});">Serviços</a></li>
+                    <li><a href="portfolio.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_modelos_servicos_page'});">Modelos</a></li>
+                    <li><a href="sobre.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_sobre_servicos_page'});">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="nav-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_nav_contato_servicos_page'});">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações e Menu à Direita (Desktop) -->
+            <div class="header-right-side">
+                <a href="orcamento.html" class="btn btn-primary free-quote-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'header_orcamento_gratis_servicos'});">Orçamento Grátis</a>
+                <div class="settings-menu" id="settings-menu">
+                    <button class="settings-toggle" id="settings-toggle" aria-label="Abrir opções">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="settings-dropdown">
+                        <a href="#" class="dropdown-item" id="dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_desktop_servicos'});">
+                            <i class="fas fa-adjust"></i>
+                            <span id="dark-mode-text">Modo Escuro</span>
+                        </a>
+                        <a href="config.html" class="dropdown-item" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'header_configuracoes_servicos'});">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" id="mobile-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile (conteúdo) -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-menu">
+                <li><a href="index.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_inicio_servicos_page'});"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="servicos.html" class="mobile-link active" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_servicos_servicos_page'});"><i class="fas fa-briefcase"></i>Serviços</a></li>
+                <li><a href="portfolio.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_modelos_servicos_page'});"><i class="fas fa-layer-group"></i>Modelos</a></li>
+                <li><a href="sobre.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_sobre_servicos_page'});"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                <li><a href="contato.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_nav_contato_servicos_page'});"><i class="fas fa-envelope"></i>Contato</a></li>
+                <li><a href="orcamento.html" class="btn btn-primary mobile-btn" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'mobile_orcamento_gratis_servicos'});">Orçamento Grátis</a></li>
+            </ul>
+            <div class="mobile-nav-divider"></div>
+            <ul class="mobile-menu">
+                <li><a href="#" class="mobile-link" id="mobile-dark-mode-toggle" onclick="gtag('event', 'click', {'event_category': 'ui_interaction', 'event_label': 'toggle_dark_mode_mobile_servicos'});"><i class="fas fa-adjust"></i><span id="mobile-dark-mode-text">Modo Escuro</span></a></li>
+                <li><a href="config.html" class="mobile-link" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'mobile_configuracoes_servicos'});"><i class="fas fa-cog"></i>Configurações</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- ============================================ 
+    Seção Hero (Layout com Imagem) 
+    ============================================ -->
+<section class="services-hero fade-in-element">
+    <div class="container">
+
+        <!-- Coluna da Esquerda: Todo o conteúdo de texto -->
+        <div class="hero-content-wrapper">
+            <h1>Construindo o <span class="highlight">Futuro Digital</span> Juntos</h1>
+            <p class="subtitle">Na Lumin Interactive, combinamos tecnologia avançada com design excepcional para criar experiências digitais que impulsionam negócios.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="99.9">0</span><span class="stat-suffix">%</span>
+                    </div>
+                    <div class="stat-label">Disponibilidade Garantida</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="24">0</span><span class="stat-suffix">h</span>
+                    </div>
+                    <div class="stat-label">Suporte Técnico</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                    </div>
+                    <div class="stat-label">Satisfação do Cliente</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#depoimentos" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'hero_depoimentos_servicos'});">Depoimentos <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="contato.html" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'cta_click', 'event_label': 'hero_fale_conosco_servicos'});">Fale Conosco</a>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita: Imagem -->
+        <div class="hero-image">
+            <img src="imagens/serviçoimagesemfundo.webp" alt="Ilustração da equipe construindo o futuro digital" class="hero-img">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Serviços Principais -->
+<section class="main-services fade-in-element" id="servicos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Nossos <span class="highlight">Serviços</span> com Preços</h2>
+            <p class="section-subtitle">Soluções profissionais para todas as suas necessidades digitais e de TI</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Serviço 1: Reestruturação de Site -->
+            <div class="service-card" data-service-id="restructuring" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_reestruturacao'});">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>Reestruturação de Site</h3>
+                <p>Transforme seu site antigo em uma máquina de conversão moderna e responsiva.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Redesign completo</li>
+                    <li><i class="fas fa-check"></i> Otimização para mobile</li>
+                    <li><i class="fas fa-check"></i> Melhoria de velocidade</li>
+                    <li><i class="fas fa-check"></i> SEO básico incluído</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 1.865,00</span>
+                        <div class="discount-badge">25% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="1399.90">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_reestruturacao'});">Ver Detalhes</a>
+            </div>
+            
+            <!-- Serviço 2: Landing Page Premium -->
+            <div class="service-card" data-service-id="landing-page" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_landing_page'});">
+                <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Landing Page Premium</h3>
+                <p>Página de alta conversão para suas campanhas de marketing e lançamentos.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Design exclusivo</li>
+                    <li><i class="fas fa-check"></i> Formulários otimizados</li>
+                    <li><i class="fas fa-check"></i> Integração com CRM</li>
+                    <li><i class="fas fa-check"></i> Testes A/B incluídos</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 1299,00</span>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="1039.20">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_landing_page'});">Ver Detalhes</a>
+            </div>
+            
+            <!-- Serviço 3: Otimização SEO Express -->
+            <div class="service-card" data-service-id="seo" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_seo'});">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Otimização SEO Express</h3>
+                <p>Aumente sua visibilidade no Google com nosso pacote de otimização rápida.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Análise técnica</li>
+                    <li><i class="fas fa-check"></i> Otimização de conteúdo</li>
+                    <li><i class="fas fa-check"></i> Meta tags e schema</li>
+                    <li><i class="fas fa-check"></i> Relatório completo</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 875,00</span>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="699.00">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_seo'});">Ver Detalhes</a>
+            </div>
+            
+            <!-- Serviço 4: Manutenção Preventiva -->
+            <div class="service-card" data-service-id="maintenance" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_manutencao'});">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Manutenção Preventiva</h3>
+                <p>Mantenha seu site seguro, atualizado e funcionando perfeitamente.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Atualizações de segurança</li>
+                    <li><i class="fas fa-check"></i> Monitoramento 24h</li>
+                    <li><i class="fas fa-check"></i> Correções emergenciais</li>
+                    <li><i class="fas fa-check"></i> Relatório mensal</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 249,00/mês</span>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="199.90">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_manutencao'});">Ver Detalhes</a>
+            </div>
+            
+            <!-- Serviço 5: Formatação e Otimização -->
+            <div class="service-card" data-service-id="formatting" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_formatacao'});">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Formatação e Otimização</h3>
+                <p>Deixe seu computador ou notebook mais rápido e seguro com uma formatação limpa.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Backup de arquivos importantes</li>
+                    <li><i class="fas fa-check"></i> Instalação do sistema operacional</li>
+                    <li><i class="fas fa-check"></i> Instalação de drivers e softwares</li>
+                    <li><i class="fas fa-check"></i> Otimização de performance</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 199,00</span>
+                        <div class="discount-badge">25% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="149.90">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_formatacao'});">Ver Detalhes</a>
+            </div>
+
+            <!-- Serviço 6: Remoção de Vírus e Malware -->
+            <div class="service-card" data-service-id="virus-removal" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_remocao_virus'});">
+                <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>Remoção de Vírus e Malware</h3>
+                <p>Proteja seus dados e recupere o desempenho do seu computador.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Varredura completa do sistema</li>
+                    <li><i class="fas fa-check"></i> Remoção de ameaças</li>
+                    <li><i class="fas fa-check"></i> Instalação de antivírus</li>
+                    <li><i class="fas fa-check"></i> Dicas de segurança</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 172,00</span>
+                        <div class="discount-badge">25% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="129.00">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_remocao_virus'});">Ver Detalhes</a>
+            </div>
+
+            <!-- Serviço 7: Configuração de Firewall e Rede -->
+            <div class="service-card" data-service-id="firewall" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_firewall'});">
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Configuração de Firewall e Rede</h3>
+                <p>Proteja sua rede contra ameaças externas e otimize a comunicação interna.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Instalação e configuração de firewall</li>
+                    <li><i class="fas fa-check"></i> Definição de regras de segurança</li>
+                    <li><i class="fas fa-check"></i> Segmentação de rede (VLANs)</li>
+                    <li><i class="fas fa-check"></i> Monitoramento de tráfego</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 932,00</span>
+                        <div class="discount-badge">25% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="699.00">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_firewall'});">Ver Detalhes</a>
+            </div>
+
+            <!-- Serviço 8: Gestão de Servidores (AD & Proxy) -->
+            <div class="service-card" data-service-id="server" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_servidores'});">
+                <div class="service-icon"><i class="fas fa-server"></i></div>
+                <h3>Gestão de Servidores (AD & Proxy)</h3>
+                <p>Centralize a gestão de usuários e controle o acesso à internet na sua empresa.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Implantação de Active Directory</li>
+                    <li><i class="fas fa-check"></i> Gerenciamento de usuários e permissões</li>
+                    <li><i class="fas fa-check"></i> Configuração de servidor Proxy</li>
+                    <li><i class="fas fa-check"></i> Filtros de conteúdo web</li>
+                </ul>
+                <div class="service-price">
+                    <div class="price-header">
+                        <span class="price-old">De R$ 1.187,00</span>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+                    <span class="price-prefix">A partir de</span>
+                    <span class="price-current" data-target="950.00">R$ 0,00</span>
+                    <div class="payment-methods">
+                        <span><i class="fa-brands fa-pix"></i> via PIX</span>
+                        <span><i class="fas fa-credit-card"></i> em até 12x</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_servidores'});">Ver Detalhes</a>
+            </div>
+
+            <!-- Serviço 9: Consultoria de TI Estratégica -->
+            <div class="service-card" data-service-id="consulting" onclick="gtag('event', 'view_item', {'event_category': 'service_engagement', 'event_label': 'view_service_consultoria'});">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Consultoria de TI Estratégica</h3>
+                <p>Alinhe a tecnologia aos seus objetivos de negócio para crescer com segurança.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Diagnóstico da infraestrutura atual</li>
+                    <li><i class="fas fa-check"></i> Planejamento de investimentos em TI</li>
+                    <li><i class="fas fa-check"></i> Recomendação de novas tecnologias</li>
+                    <li><i class="fas fa-check"></i> Desenvolvimento de políticas de segurança</li>
+                </ul>
+                <div class="service-price price-consult">
+                    <span class="price-current">Sob Consulta</span>
+                </div>
+                <a href="#" class="btn btn-primary service-request-btn" onclick="gtag('event', 'click', {'event_category': 'service_interaction', 'event_label': 'ver_detalhes_consultoria'});">Ver Detalhes</a>
+            </div>
+        </div> 
+    </div> 
+</section> 
+
+<!-- NOVA SEÇÃO DE DEPOIMENTOS -->
+<section class="testimonials-section fade-in-element" id="depoimentos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">O que nossos <span class="highlight">clientes dizem</span></h2>
+            <p class="section-subtitle">Resultados reais de parcerias de sucesso que geram confiança e credibilidade.</p>
+        </div>
+        <div class="testimonials-grid">
+            <!-- Depoimento 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <i class="fas fa-quote-left"></i>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="testimonial-service">Reestruturação de Site</h3>
+                <p class="testimonial-quote">“Nosso site estava ultrapassado e não convertia. Depois da reestruturação feita pela Lumin Interactive, tivemos um aumento de 40% nas vendas online em apenas dois meses. O design ficou moderno e a navegação muito mais rápida.”</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Mariana Souza</span>
+                    <span class="author-title">Gerente de E-commerce</span>
+                </div>
+            </div>
+            <!-- Depoimento 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <i class="fas fa-quote-left"></i>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="testimonial-service">Landing Page Premium</h3>
+                <p class="testimonial-quote">“Precisávamos de uma página de alta conversão para uma campanha de lançamento. A equipe entregou uma landing page incrível, com integração ao nosso CRM. O resultado foi acima da média: taxa de conversão de 12%.”</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Ricardo Alves</span>
+                    <span class="author-title">Coordenador de Marketing</span>
+                </div>
+            </div>
+            <!-- Depoimento 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <i class="fas fa-quote-left"></i>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="testimonial-service">Otimização SEO Express</h3>
+                <p class="testimonial-quote">“Estávamos invisíveis no Google. Com o pacote de SEO da Lumin, passamos da 8ª para a 2ª posição em buscas locais em apenas 3 semanas. Um investimento pequeno que trouxe grande retorno.”</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Juliana Ferreira</span>
+                    <span class="author-title">Diretora Administrativa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer fade-in-element">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="footer-logo" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_logo_servicos_page'});">
+                    <img src="imagens/logobrancalumin.webp" alt="Lumin Interactive Logo" class="footer-logo-img">
+                    <span class="logo-text">Lumin Interactive</span>
+                </a>
+                <p>Transformando ideias em experiências digitais memoráveis.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_facebook_servicos_page'});"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_instagram_servicos_page'});"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onclick="gtag('event', 'click', {'event_category': 'social_media', 'event_label': 'footer_whatsapp_servicos_page'});"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_inicio_servicos_page'});">Início</a></li>
+                    <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_servicos_servicos_page'});">Serviços</a></li>
+                    <li><a href="portfolio.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_modelos_servicos_page'});">Modelos</a></li>
+                    <li><a href="sobre.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_sobre_servicos_page'});">Sobre Nós</a></li>
+                    <li><a href="contato.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_nav_contato_servicos_page'});">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <h3>Nossos Serviços</h3>
+                <ul>
+                    <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_reestruturacao_servicos_page'});">Reestruturação de Site</a></li>
+                    <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_manutencao_servicos_page'});">Manutenção Preventiva</a></li>
+                    <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_remocao_virus_servicos_page'});">Remoção de Vírus e Malware</a></li>
+                    <li><a href="servicos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_servico_firewall_servicos_page'});">Configuração de Firewall e Rede</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contato@lumininteractive.com.br" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_email_servicos_page'});">contato@lumininteractive.com.br</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5567996030671" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_whatsapp_contato_servicos_page'});">(67) 99603-0671</a></li>
+                    <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lumin.interactive/" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'footer_instagram_contato_servicos_page'});">@lumin.interactive</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> Lumin Interactive. Todos os direitos reservados.</p>
+            <p>CNPJ: 62.601.543/0001-11</p>
+            <div class="footer-legal">
+                <a href="privacidade.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_politica_privacidade_servicos_page'});">Política de Privacidade</a>
+                <a href="termos.html" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'footer_termos_servico_servicos_page'});">Termos de Serviço</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Botão Voltar ao Topo -->
+<a href="#header" class="back-to-top" id="back-to-top" onclick="gtag('event', 'click', {'event_category': 'navigation', 'event_label': 'back_to_top_servicos'});">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Modal de Serviço -->
+<div class="modal-overlay" id="service-modal-overlay">
+    <div class="modal" id="service-modal">
+        <div class="modal-content-wrapper">
+            <div class="modal-details-column">
+                <div class="modal-header">
+                    <div class="modal-header-content">
+                        <i id="modal-service-icon" class="fas fa-globe"></i>
+                        <h3 id="modal-service-title">Nome do Serviço</h3>
+                    </div>
+                    <button class="close-button" id="service-modal-close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-service-description" class="modal-intro-description"></p>
+                    <div class="modal-grid">
+                        <div class="modal-section">
+                            <h4 class="modal-section-title"><i class="fas fa-check-circle"></i> O que está incluído</h4>
+                            <ul class="modal-list" id="modal-service-includes"></ul>
+                        </div>
+                        <div class="modal-section">
+                            <h4 class="modal-section-title"><i class="fas fa-bullseye"></i> Ideal para quem</h4>
+                            <ul class="modal-list" id="modal-service-ideal-for"></ul>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <h4 class="modal-section-title"><i class="fas fa-project-diagram"></i> Nosso Processo</h4>
+                        <ol class="modal-process-list" id="modal-service-process"></ol>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-price" id="modal-price-container">
+                        <!-- O conteúdo do preço será inserido aqui pelo JavaScript -->
+                    </div>
+                    <a href="#" id="modal-hire-btn" target="_blank" class="btn btn-primary btn-lg" onclick="gtag('event', 'generate_lead', {'event_category': 'lead_generation', 'event_label': 'contratar_servico_whatsapp_modal_servicos'});">
+                        <i class="fab fa-whatsapp"></i> Contratar Serviço
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Banner de Cookies Simplificado -->
+    <div id="cookie-banner-container" class="cookie-banner-container" role="dialog" aria-labelledby="cookie-title" aria-modal="true" hidden>
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h2 id="cookie-title">Aviso de Cookies</h2>
+                <p>
+                    Nosso site usa cookies essenciais e de análise para melhorar sua experiência. Ao clicar em "Entendi", você concorda com o uso de ambos. Para mais detalhes, consulte nossa <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookie-acknowledge-btn" class="cookie-btn-primary" onclick="gtag('event', 'click', {'event_category': 'cookie_consent', 'event_label': 'cookie_banner_acknowledged_servicos'});">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="js/global.js" defer></script> 
+<script src="js/servicos.js" defer></script> 
+
+<!-- Lógica do Banner de Cookies -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner-container');
+    if (!banner) return;
+
+    const acknowledgeBtn = document.getElementById('cookie-acknowledge-btn');
+    const consentLocalStorageKey = 'lumin_cookie_consent_v2'; 
+
+    const hideBanner = () => {
+        banner.setAttribute('hidden', true);
+    };
+
+    const handleConsent = (consentStatus) => {
+        gtag('consent', 'update', {
+            'analytics_storage': consentStatus
+        });
+        localStorage.setItem(consentLocalStorageKey, JSON.stringify({
+            analytics_storage: consentStatus,
+            timestamp: new Date().getTime()
+        }));
+        hideBanner();
+    };
+    
+    acknowledgeBtn.addEventListener('click', () => {
+        handleConsent('granted');
+    });
+
+    const savedConsent = localStorage.getItem(consentLocalStorageKey);
+    if (!savedConsent) {
+        banner.removeAttribute('hidden');
+    } else {
+        const parsedConsent = JSON.parse(savedConsent);
+        gtag('consent', 'update', {
+             'analytics_storage': parsedConsent.analytics_storage || 'denied'
+        });
+    }
+});
+</script>
+
+<!-- REGISTRO DO SERVICE WORKER (PARA CACHE E OFFLINE) -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registrado com sucesso:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('Falha ao registrar o Service Worker:', error);
+                });
+        });
+    }
+</script>
+
+</body> 
+</html>

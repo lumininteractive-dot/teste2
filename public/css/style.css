@@ -1,0 +1,1466 @@
+/* ============================================
+    VARIÁVEIS GLOBAIS E RESET
+   ============================================ */
+
+/* Estilos Base */
+:root {
+    --primary: #6c63ff;
+    --primary-dark: #4d44db;
+    --primary-light: #a5a1ff;
+    --secondary: #ff6584;
+    --dark: #2d3748;
+    --dark-gray: #4a5568;
+    --gray: #718096;
+    --light-gray: #edf2f7;
+    --lighter-gray: #f7fafc;
+    --white: #ffffff;
+    --black: #1a202c;
+    --success: #48bb78;
+    --error: #f56565;
+    --warning: #ed8936;
+    --transition-medium: all 0.3s ease;
+    --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+  background-color: transparent; /* Fundo da barra de rolagem (track) - transparente para se misturar ao body */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary); /* Cor da "thumb" (a barra que você arrasta) */
+  border-radius: 10px; /* Borda arredondada da thumb */
+  border: 3px solid var(--white); /* Borda em volta da thumb, para destacá-la do fundo */
+}
+
+/* No Dark Mode, ajustar a cor da borda da thumb para contraste */
+html.dark-mode body::-webkit-scrollbar-thumb {
+    border-color: var(--lighter-gray); /* Ajusta a borda no modo escuro */
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin; /* Largura da barra de rolagem (thin, auto ou none) */
+  scrollbar-color: var(--primary) transparent; /* thumb track (cor da barra que rola / cor do fundo) */
+}
+
+
+
+section:not(.hero) {
+    background-color: var(--lighter-gray);
+    padding: 60px 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+/* Container */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================
+    BOTÕES COM EFEITO HOVER PROFISSIONAL
+   ============================================ */
+.btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Pseudo-elemento para a animação de fundo */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%; /* Origem da animação na direita */
+    transform: scaleX(0);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* O fundo do hover para o botão primário */
+.btn-primary::before {
+    background: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px); /* Efeito de elevação sutil */
+    box-shadow: 0 7px 20px rgba(108, 99, 255, 0.35); /* Sombra mais destacada */
+}
+
+.btn-primary:hover::before {
+    transform-origin: 0% 50%; /* Anima da direita para a esquerda */
+    transform: scaleX(1);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--dark);
+    border: 1px solid var(--light-gray);
+}
+
+/* O fundo do hover para o botão secundário */
+.btn-secondary::before {
+    background: var(--primary);
+}
+
+.btn-secondary:hover {
+    color: #ffffff; /* Muda a cor do texto no hover */
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(108, 99, 255, 0.2);
+}
+
+.btn-secondary:hover::before {
+    transform-origin: 0% 50%; /* Anima da direita para a esquerda */
+    transform: scaleX(1);
+}
+
+/* Botões da hero - Sobrescreve o padding e font-size */
+.hero-buttons .btn {
+    padding: 10px 28px;
+    font-size: 18px;
+}
+
+
+/* ============================================
+    HERO SEÇÃO
+   ============================================
+*/
+
+.hero {
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 100%);
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -30px;
+    right: -30px;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 20%;
+}
+
+
+/* ============================================
+    CABEÇALHO DE SEÇÃO GENÉRICO
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+    ANIMAÇÃO DE SCROLL (REVELAR)
+   ============================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ============================================
+    SEÇÃO DE SERVIÇOS
+   ============================================ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    background-color: var(--light-gray);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transition: height 0.3s ease;
+}
+
+.service-card:hover::before {
+    height: 10px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(138, 132, 255, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.service-features {
+    padding-left: 0;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features i {
+    color: var(--primary);
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.service-price {
+    margin-top: auto;
+    text-align: center;
+}
+
+.service-price .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.service-price .price-note {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+
+/* ============================================
+    PROMOÇÃO E PREÇOS
+   ============================================ */
+
+.price-discount-badge {
+    background-color: var(--success);
+    color: var(--white) !important;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.price-top-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-old {
+    font-size: 1rem;
+    color: var(--gray);
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.service-price .price, .portfolio-pricing .price-main {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.portfolio-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px !important;
+}
+
+/* ============================================
+    SEÇÃO DE PORTFÓLIO
+   ============================================ */
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.portfolio-summary {
+    font-size: 0.85rem; /* Tamanho pequeno para o resumo */
+    color: var(--gray); /* Cor sutil */
+    margin-bottom: 1rem; /* Espaçamento abaixo do resumo */
+    min-height: 40px; /* Garante uma altura mínima para alinhar os cards */
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita o texto a 2 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--light-gray);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    background-color: var(--light-gray);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+}
+
+.portfolio-item {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.portfolio-image-container {
+    position: relative;
+    height: 220px; /* NOVO: Altura fixa para o container */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%; /* NOVO: Imagem preenche o container */
+    object-fit: cover; /* NOVO: Garante que a imagem cubra a área sem distorcer */
+}
+
+.portfolio-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left; 
+}
+
+.portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 700; 
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-pricing {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.price-main {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.price-installments {
+    font-size: 0.9rem;
+    color: var(--gray);
+    width: 100%;
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.pix-discount {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--success);
+    background-color: rgba(72, 187, 120, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pix-discount i {
+    margin-right: 5px;
+}
+
+/* ============================================
+    MODAIS (ESTILO GERAL)
+   ============================================ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 32, 44, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s 0.4s;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.modal-overlay .modal-container {
+    background-color: var(--white);
+    border-radius: 12px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay.active .modal-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--light-gray);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close-btn:hover {
+    background-color: #e2e8f0;
+    transform: rotate(90deg);
+}
+
+/* MODAL DE SERVIÇO (ESPECÍFICO) */
+#service-modal .modal-container {
+    max-width: 600px;
+    padding: 2.5rem;
+    max-height: 90vh;
+    overflow-y: auto; /* Permite scroll no modal de serviço */
+}
+
+#service-modal #modal-title {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+#service-modal #modal-description {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+#service-modal h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 1.5rem;
+}
+
+#service-modal .service-price {
+    background-color: var(--lighter-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+#service-modal .btn-primary {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+}
+
+
+/* ============================================
+    MODAL DE PORTFÓLIO (LAYOUT ORIGINAL CORRIGIDO)
+   ============================================ */
+#portfolio-modal .modal-container {
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* MODIFICADO: Permite que o container inteiro role */
+}
+
+/* Galeria de Imagens */
+.modal-gallery-container {
+    position: relative;
+    background-color: #2d3748;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+#modal-portfolio-img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh; /* Limita a altura da imagem para não dominar a tela */
+    object-fit: contain; /* ESSENCIAL: Mostra a imagem inteira, respeitando a proporção */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+}
+
+.modal-gallery-container:hover .gallery-nav {
+    opacity: 1;
+    visibility: visible;
+}
+.gallery-nav:hover { background: rgba(0,0,0,0.7); }
+.gallery-nav.prev { left: 10px; }
+.gallery-nav.next { right: 10px; }
+
+/* Wrapper do Conteúdo com Scroll */
+.modal-content-wrapper {
+    padding: 2.5rem;
+    /* As propriedades de scroll foram movidas para o .modal-container */
+}
+
+#modal-portfolio-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+#modal-portfolio-description {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+}
+
+.modal-features-container h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+#modal-portfolio-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    columns: 2; /* Mantém as colunas se houver espaço */
+    gap: 20px;
+}
+
+#modal-portfolio-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    break-inside: avoid;
+}
+
+#modal-portfolio-features li::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.modal-pricing-info {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--lighter-gray), var(--white));
+    border: 1px solid var(--light-gray);
+}
+
+.price-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.price-value-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.price-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.modal-cta-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+/* Responsividade do Modal de Portfólio */
+@media (max-width: 600px) {
+    #modal-portfolio-features {
+        columns: 1;
+    }
+    .modal-content-wrapper {
+        padding: 1.5rem;
+    }
+}
+
+
+/* ============================================
+    SEÇÃO SOBRE (EQUIPE) - ATUALIZADO
+   ============================================
+*/
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.about-text p {
+    color: var(--dark-gray);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    background-color: rgba(108, 99, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.member-initials {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    border: 4px solid var(--white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .member-initials {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.member-role {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.member-bio {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+/* ============================================
+    SEÇÃO DIFERENCIAIS - ATUALIZADO
+   ============================================
+*/
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.differential-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+}
+
+.differential-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-medium);
+    border-bottom-color: var(--primary);
+}
+
+.differential-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(138, 132, 255, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary);
+    font-size: 1.8rem;
+    transition: all 0.4s ease;
+}
+
+.differential-card:hover .differential-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+.differential-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.differential-card p {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+
+
+/* ============================================
+    SEÇÃO DE CONTATO
+   ============================================
+*/
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-top: 5px;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.info-item p {
+    color: var(--gray);
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-link {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    flex: 1;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* ============================================
+    BOTÃO VOLTAR AO TOPO
+   ============================================
+*/
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 5px 20px rgba(67, 97, 238, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    transition: all 0.4s ease;
+    z-index: 999;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+    RESPONSIVIDADE GERAL
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .container,
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .hero-content,
+    .about-text,
+    .contact-info {
+        text-align: center;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+
+    /* CORREÇÃO: Esconde os círculos decorativos em telas menores */
+    .hero-shapes {
+        display: none;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .info-item {
+        text-align: left;
+    }
+
+    .contact-social {
+        justify-content: center;
+    }
+    
+    .hero-image,
+    .about-image {
+        order: -1;
+        margin-bottom: 50px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .section-title,
+    #modal-portfolio-title,
+    #service-modal #modal-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+      width: auto;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* ============================================
+    MODO ESCURO (DARK MODE) - CORRIGIDO E COMPLETO
+   ============================================
+*/
+
+/* Define as novas cores das variáveis quando o modo escuro está ativo */
+html.dark-mode {
+    --dark: #e2e8f0;            /* Cor de texto principal (clara) */
+    --dark-gray: #a0aec0;       /* Cor de texto secundária */
+    --gray: #718096;            /* Cor de texto subtil */
+    --light-gray: #2d3748;      /* Fundo de componente/borda */
+    --lighter-gray: #1a202c;    /* Fundo de card */
+    --white: #171923;           /* Fundo principal (escuro) */
+    --black: #ffffff;           /* Cor de texto oposta (branca) */
+}
+
+/* Ajustes de fundo e texto globais */
+html.dark-mode body {
+    color: var(--dark);
+    background-color: var(--white); /* Garante que o fundo do body seja escuro */
+}
+
+/* Ajusta o fundo de todas as seções principais no modo escuro */
+html.dark-mode section {
+    background-color: var(--white);
+}
+
+html.dark-mode .services-grid,
+html.dark-mode .portfolio-grid {
+    background-color: #1A202C;
+}
+
+/* Cards e componentes com fundo */
+html.dark-mode .service-card,
+html.dark-mode .team-member,
+html.dark-mode .differential-card,
+html.dark-mode .contact-form,
+html.dark-mode .feature-item,
+html.dark-mode .portfolio-item { /* Adicionado para os cards de modelo */
+    background-color: var(--lighter-gray);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2d3748;
+}
+
+/* Ajustes de Texto Específicos que podem ter cores hardcoded */
+html.dark-mode .hero-title,
+html.dark-mode .portfolio-title {
+    color: var(--dark);
+}
+
+/* Filtros do Portfólio */
+html.dark-mode .filter-btn {
+    background-color: var(--light-gray);
+    color: var(--dark);
+    border-color: #4a5568;
+}
+
+html.dark-mode .filter-btn:hover {
+    background-color: #4a5568;
+}
+
+html.dark-mode .btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--dark);
+    border-color: #4a5568;
+}
+
+/* Formulários */
+html.dark-mode .form-group input,
+html.dark-mode .form-group textarea,
+html.dark-mode .form-group select {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: var(--dark);
+}
+
+html.dark-mode .form-group input::placeholder,
+html.dark-mode .form-group textarea::placeholder {
+    color: var(--gray);
+}
+
+html.dark-mode .form-group input:focus,
+html.dark-mode .form-group textarea:focus,
+html.dark-mode .form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+/* Modais */
+html.dark-mode .modal-overlay .modal-container {
+    background-color: #1e2430; /* Um pouco mais claro que o fundo do card para se destacar */
+}
+
+html.dark-mode .modal-close-btn {
+    background: var(--light-gray);
+    color: var(--gray);
+}
+
+html.dark-mode .modal-close-btn:hover {
+    background-color: #4a5568;
+    color: var(--dark);
+}
+
+html.dark-mode h4 {
+    border-top-color: var(--light-gray);
+    border-bottom-color: var(--light-gray);
+}
+
+html.dark-mode #service-modal .service-price {
+    background-color: var(--lighter-gray);
+}
+
+html.dark-mode .modal-gallery-container {
+    background-color: #1a202c;
+}
+
+html.dark-mode .modal-pricing-info {
+    background: linear-gradient(135deg, #1A202C, #2D3748);
+    border-color: #4A5568;
+}
+
+
