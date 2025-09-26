@@ -5,9 +5,9 @@
 */
 
 // Nomes dos caches para organização e versionamento
-const STATIC_CACHE_NAME = 'static-assets-v5';
-const IMAGE_CACHE_NAME = 'image-assets-v5';
-const FONT_CACHE_NAME = 'font-assets-v5';
+const STATIC_CACHE_NAME = 'static-assets-v6';
+const IMAGE_CACHE_NAME = 'image-assets-v6';
+const FONT_CACHE_NAME = 'font-assets-v6';
 
 // Limite de imagens no cache
 const MAX_IMAGE_CACHE_ENTRIES = 50;
